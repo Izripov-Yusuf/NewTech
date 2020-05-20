@@ -1,0 +1,3 @@
+mixin svg( name, width, height , className)
+  svg( width=("" + width) height=("" + height) aria-hidden="true" class=(className ? className : null))
+    use( xlink:href=("img/sprite.svg#" + name) )

@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('../../fonts/Montserrat-Regular.eot');
+  src: url('../../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Montserrat-Regular.woff') format('woff'),
+    url('../../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('../../fonts/Montserrat-Medium.eot');
+  src: url('../../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Montserrat-Medium.woff') format('woff'),
+    url('../../fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Semibold';
+  src: url('../../fonts/Montserrat-SemiBold.eot');
+  src: url('../../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Montserrat-SemiBold.woff') format('woff'),
+    url('../../fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('../../fonts/Montserrat-ExtraBold.eot');
+  src: url('../../fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Montserrat-ExtraBold.woff') format('woff'),
+    url('../../fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Furore';
+  src: url('../../fonts/Furore.eot');
+  src: url('../../fonts/Furore.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Furore.woff') format('woff'),
+    url('../../fonts/Furore.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF Din Stencil Thin';
+    src: url('../../fonts/PFDinStencil-Thin.eot');
+    src: url('../../fonts/PFDinStencil-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/PFDinStencil-Thin.woff') format('woff'),
+    url('../../fonts/PFDinStencil-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+@mixin montserratReg {
+  font-family: 'Montserrat Regular', sans-serif;
+}
+
+@mixin montserratMed {
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+@mixin montserratSemibold {
+  font-family: 'Montserrat Semibold', sans-serif;
+}
+
+@mixin montserratBold {
+  font-family: 'Montserrat Bold', sans-serif;
+}
+
+@mixin furore {
+  font-family: 'Furore', arial;
+}
+
+@mixin pfDin {
+  font-family: 'PF Din Stencil Thin', arial;
+}
