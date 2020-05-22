@@ -4665,15 +4665,15 @@ __webpack_require__.r(__webpack_exports__);
     freeMode: true,
     spaceBetween: 20,
     watchSlidesVisibility: true,
-    watchSlidesProgress: true
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
   });
   var galleryTop = new _lib_swiper_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.gallery-top', {
     thumbs: {
       swiper: galleryThumbs
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
     }
   });
 });
