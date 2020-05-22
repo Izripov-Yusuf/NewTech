@@ -1,0 +1,132 @@
+.product
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &-image
+    margin-top: 40px
+  &__title
+    font-size: 30px
+    line-height: 35px
+    letter-spacing: 0.035em
+    color: #232323
+    +furore
+    &--second
+      margin: 70px 0 85px
+      text-align: center
+  &__descr
+    margin: 10px 0 25px
+    max-width: 365px
+    display: inline-block
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: rgba(0, 0, 0, 0.38)
+  &-text
+    &-block
+      width: 100%
+      max-width: 495px
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+  &-item
+    margin-bottom: 45px
+    display: flex
+    align-items: center
+    flex: 50%
+    svg
+      margin-right: 10px
+    &-text
+      display: flex
+      flex-direction: column
+      &__title
+        margin-bottom: 10px
+        font-size: 14px
+        line-height: 17px
+        rgba(147, 147, 147, 0.63)
+      &__descr
+        +montserratSemibold
+        font-size: 18px
+        line-height: 22px
+        color: #2b2b2b
+  &__additional
+    display: block
+    font-size: 14px
+    line-height: 17px
+    color: #bbb
+  &-additional
+    &-select
+      margin: 10px 0 20px
+      width: 100%
+      padding: 16px 20px
+      border: none
+      background: $white
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.06)
+      border-radius: 10px
+      font-size: 14px
+      line-height: 17
+      color: #6c6c6b
+  &__button
+    width: 100%
+    max-width: 197px
+    padding: 11px 0
+    color: $white
+    background-color: $blue
+    +montserratSemibold
+    text-transform: uppercase
+  &-slide
+    width: 100%
+    max-width: 415px
+    height: 493px
+    padding: 60px 0 47px 55px
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.06)
+    border-radius: 10px
+    img
+      height: 149px
+    &__title
+      margin: 70px 0 20px
+      +furore
+      font-size: 18px
+      line-height: 21px
+      letter-spacing: 0.035em
+      color: #232323
+    &-item
+      margin-bottom: 15px
+      display: flex
+      align-items: center
+      svg
+        margin-right: 15px
+      &-text
+        display: flex
+        flex-direction: column
+        &__title
+          margin-bottom: 10px
+          font-size: 14px
+          line-height: 17px
+          color: rgba(147, 147, 147, 0.63)
+        &__descr
+          +montserratSemibold
+          font-size: 18px
+          line-height: 22px
+          color: #2b2b2b
+    &__button
+      margin: 10px auto 0
+      width: 100%
+      max-width: 129px
+      padding: 6px 0
+      color: $white
+      font-size: 13px
+      line-height: 16px
+      letter-spacing: 0.01em
+      background-color: $blue
+      +montserratSemibold
+      text-transform: uppercase
+      text-align: center
+  &-slider
+    &-arrows
+      position: relative
+      .swiper-button-prev, .swiper-button-next
+        width: 41px
+        height: 10px
+        &:after, &:before
+          content: ''
+          display: none

@@ -1,0 +1,31 @@
+mixin header(pageName)
+  header.header
+    .header-container
+      .header-logo
+        +svg('logo', 65, 26)
+        .header-logo-text
+          span.brand__name НОВЫЕ ТЕХНОЛОГИИ
+          span.brand__inn ИНН 7708701535
+      .header-menu
+        ul.header-menu-list
+          li.header-menu-list__item
+            a.header-menu__link(href="#") Области применения
+          li.header-menu-list__item
+            a.header-menu__link(href="#") Беспилотная авиация
+          li.header-menu-list__item
+            a.header-menu__link(href="#") Решения
+          li.header-menu-list__item
+            a.header-menu__link(href="#") Контакты
+      .header-burger
+        span.burger
+  header.header--mobile
+    .header--mobile-close ×
+    ul.header--mobile-menu-list
+      li.header--mobile-menu-list__item
+        a.header--mobile-menu__link(href="#") Области применения
+      li.header--mobile-menu-list__item
+        a.header--mobile-menu__link(href="#") Беспилотная авиация
+      li.header--mobile-menu-list__item
+        a.header--mobile-menu__link(href="#") Решения
+      li.header--mobile-menu-list__item
+        a.header--mobile-menu__link(href="#") Контакты

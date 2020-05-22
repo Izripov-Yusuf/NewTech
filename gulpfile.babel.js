@@ -24,7 +24,7 @@ import webpackConfig from './webpack.config';
 
 const server = browserSync.create();
 
-gulp.task(`css`, () => gulp.src(`source/sass/style.scss`)
+gulp.task(`css`, () => gulp.src(`source/sass/style.sass`)
   .pipe(plumber())
   .pipe(sass({
     includePaths: normalize.includePaths,

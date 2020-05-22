@@ -1,0 +1,122 @@
+.header
+  position: fixed
+  width: 100%
+  color: $white
+  z-index: 111111111
+  transition: 0.3s
+  &--sticky
+    color: $black
+    background-color: $white
+    .header
+      &-menu
+        &__link
+          color: $black
+  &-container 
+    width: 100%
+    max-width: 1000px
+    padding: 30px 15px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include mobile
+      padding-top: 40px
+  &-logo
+    display: flex
+    align-items: center
+    &-text
+      display: flex
+      flex-direction: column
+    .brand__name
+      font-size: 13px
+      line-height: 16px
+      letter-spacing: 0.01em
+      +montserratSemibold
+      @include mobile
+        font-size: 11px
+        line-height: 13px
+    .brand__inn
+      font-weight: 300
+      font-size: 12px
+      line-height: 15px
+      @include mobile
+        font-size: 9px
+        line-height: 11px
+  &-menu
+    @include tablet
+      display: none
+    &-list
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      width: 100%
+      max-width: 690px
+      &__item
+        margin-right: 50px
+        &:last-child
+          margin-right: 0
+    &__link
+      font-size: 13px
+      line-height: 16px
+      letter-spacing: 0.05em
+      +montserratMed
+      color: $white
+      text-decoration: none
+      text-transform: uppercase
+      transition: 0.3s
+  &-burger
+    display: none
+    @include tablet
+      display: block
+      padding: 12px 0
+    .burger
+      position: relative
+      display: block
+      width: 24px
+      height: 4px
+      background-color: #3D56CC
+      &:after, &:before
+        content: ''
+        position: absolute
+        display: block
+        width: 24px
+        height: 4px
+        background-color: #3D56CC
+      &:after
+        transform: translateY(-9px)
+      &:before
+        transform: translateY(9px)
+  &--mobile
+    position: fixed
+    right: 0
+    transform: translateX(105%)
+    display: block
+    height: 100%
+    width: 100%
+    background-color: $white
+    transition: transform 0.3s
+    z-index: 1
+    &-active
+      transform: translateX(0%)
+    &-close
+      position: absolute
+      top: 11px
+      right: 10px
+      font-size: 50px
+      color: #3D56CC
+      @include mobile
+        top: 17px
+    &-menu
+      &-list
+        padding: 165px 0 0 15px
+        &__item
+          margin-bottom: 35px
+          &:last-child
+            margin-bottom: 0
+      &__link
+        font-size: 16px
+        color: $black
+        line-height: 20px
+        letter-spacing: 0.05em
+        +montserratBold
+        text-decoration: none
+        text-transform: uppercase

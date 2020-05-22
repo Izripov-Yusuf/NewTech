@@ -1,0 +1,76 @@
+.advantages
+  &-section
+    padding: 170px 0 130px
+    @include mobile-portrait
+      padding: 70px 0 185px
+  &__title
+    margin-bottom: 70px
+    text-align: center
+    @include mobile-portrait
+      margin-bottom: 15px
+      text-align: left
+      font-size: 22px
+      line-height: 25px
+      letter-spacing: 0.01em
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include tablet
+      flex-direction: column
+  &-item
+    width: 100%
+    max-width: 415px
+    height: 307px
+    padding: 10px 0 0 15px
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 10px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 5px
+    @include tablet
+      margin-bottom: 15px
+    @include mobile-portrait
+      height: auto
+      padding: 35px 15px 35px 25px
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-content
+      display: flex
+      justify-content: space-between
+      align-items: center
+      img
+        height: 120px
+        @include mobile-portrait
+          display: none
+    &__descr
+      margin-top: 65px
+      font-size: 18px
+      line-height: 125%
+      color: #232323
+      @include mobile-portrait
+        margin-top: 0
+        font-size: 11px
+        max-width: 165px
+  &__number
+    position: relative
+    +pfDin
+    font-size: 64px
+    font-weight: 250
+    color: #2E3DB6
+    line-height: 77px
+    @include mobile-portrait
+      font-size: 50px
+      line-height: 60px
+    &:before
+      position: absolute
+      bottom: -36px
+      content: ''
+      display: block
+      background-color: $black
+      height: 3px
+      width: 34px
+      @include mobile-portrait
+        right: -21px
+        bottom: 50%
+        transform: translateY(50%)
+        width: 3px
+        height: 30px
