@@ -168,6 +168,11 @@ html(lang='ru')
                   select(size="1").product-additional-select
                     option(value="Система парашюта") Система парашюта
                   button.button.product__button ПОДРОБНЕЕ
+            .product-slider-arrows
+              .swiper-button-prev
+                +svg('left-arrow', 41, 10)
+              .swiper-button-next
+                +svg('right-arrow', 41, 10)
           h2.product__title.product__title--second Наша продукция
           .product-slider.swiper-container.gallery-thumbs
             .swiper-wrapper
@@ -261,10 +266,5 @@ html(lang='ru')
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
                 .button.product-slide__button ПОДРОБНЕЕ
-          .product-slider-arrows
-            .swiper-button-prev
-              +svg('left-arrow', 41, 10)
-            .swiper-button-next
-              +svg('right-arrow', 41, 10)
 
     script(src="js/main.js")
