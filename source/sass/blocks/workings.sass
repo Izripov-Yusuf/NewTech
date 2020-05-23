@@ -1,0 +1,89 @@
+.workings
+  &-section
+    padding: 105px  0 260px
+    @include mobile
+      padding: 80px 0 100px
+  &-title
+    margin: 0 auto
+  &__title
+    margin-bottom: 5px
+    text-align: center
+    @include mobile
+      text-align: left
+  &__subtitle
+    margin-left: 40.5%
+    transform: translateX(-50%)
+    display: inline-block
+    text-align: center
+    font-size: 19px
+    line-height: 23px
+    color: rgba(0, 0, 0, 0.38)
+    @include mobile
+      margin-left: 0
+      transform: translateX(0%)
+      font-size: 13px
+  &-wrap
+    margin-top: 45px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include tablet
+      flex-direction: column
+    @include mobile
+      margin-top: 55px
+  &-item
+    margin-right: 20px
+    position: relative
+    width: 100%
+    max-width: 415px
+    height: 495px
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.06)
+    border-radius: 20px
+    &:last-child
+      margin-right: 0
+    @include tablet
+      margin: 0 0 30px 0
+    @include mobile
+      height: 365px
+    img
+      margin: 60px auto 18px
+      height: 200px
+  &__number
+    padding-left: 20px
+    +pfDin
+    font-weight: 250
+    font-size: 64px
+    line-height: 77px
+  &-text
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 95px
+    padding: 30px 0 0 20px
+    background: linear-gradient(269.23deg, #0F1495 27.77%, rgba(255, 255, 255, 0) 223.45%), #0148FF
+    border-radius: 0px 0px 20px 20px
+    color: $white
+    cursor: pointer
+    transition: 0.3s
+    @include mobile
+      height: 80px
+    &-active
+      height: 315px
+      @include mobile
+        height: 195px
+    &__title
+      margin-bottom: 65px
+      +furore
+      font-size: 30px
+      font-weight: 100
+      line-height: 35px
+      letter-spacing: 0.035em
+      @include mobile
+        margin-bottom: 15px
+      @include mobile-portrait
+        font-size: 26px
+    &__descr
+      max-width: 375px
+      display: inline-block
+      font-size: 18px
+      line-height: 22px

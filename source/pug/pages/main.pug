@@ -357,9 +357,33 @@ html(lang='ru')
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
                 a(href="#").button.product-slide__button ПОДРОБНЕЕ
-            .product-slider-arrows
+            .product-slider-controls
               .swiper-button-prev
                 +svg('left-arrow', 41, 10)
+              .swiper-pagination
               .swiper-button-next
                 +svg('right-arrow', 41, 10)
+      section.section.workings-section
+        .container
+          h2.section__title.workings__title Перспективные разработки
+          span.workings__subtitle Наши текущие разработки
+          .workings-wrap
+            .workings-item
+              img(src="img/workings/workings-1.png", srcet="img/workings/workings-1@2x.png 2x", alt="Фото разработки")
+              h3.workings__number 01
+              .workings-text
+                h4.workings-text__title ЭРА-72
+                p.workings-text__descr взлетный вес от 30 до 90 кг. и увеличенная скорость полета до 300 км/ч с применением ВИШ и защитой от РЭБ.
+            .workings-item
+              img(src="img/workings/workings-2.png" srcet="img/workings/workings-2@2x.png 2x", alt="Фото разработки")
+              h3.workings__number 02
+              .workings-text
+                h4.workings-text__title ГРузовой байк
+                p.workings-text__descr взлетный вес от 30 до 90 кг. и увеличенная скорость полета до 300 км/ч с применением ВИШ и защитой от РЭБ.
+            .workings-item
+              img(src="img/workings/workings-3.png", srcet="img/workings/workings-3@2x.png 2x", alt="Фото разработки")
+              h3.workings__number 03
+              .workings-text
+                h4.workings-text__title Аэротакси
+                p.workings-text__descr взлетный вес от 30 до 90 кг. и увеличенная скорость полета до 300 км/ч с применением ВИШ и защитой от РЭБ.
     script(src="js/main.js")

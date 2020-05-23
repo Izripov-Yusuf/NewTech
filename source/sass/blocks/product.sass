@@ -2,14 +2,22 @@
   &-wrap
     display: flex
     justify-content: space-between
+    @include tablet
+      flex-direction: column
+      align-items: center
   &-image
     margin-top: 40px
+    @include tablet
+      margin: 0 0 75px
   &__title
     font-size: 30px
     line-height: 35px
     letter-spacing: 0.035em
     color: #232323
     +furore
+    @include mobile-portrait
+      font-size: 22px
+      line-height: 25px
     &--second
       margin: 70px 0 85px
       text-align: center
@@ -21,6 +29,11 @@
     font-size: 14px
     line-height: 17px
     color: rgba(0, 0, 0, 0.38)
+    @include tablet
+      margin-bottom: 20px
+    @include mobile-portrait
+      font-size: 11px
+      line-height: 13px
   &-text
     &-block
       width: 100%
@@ -28,11 +41,16 @@
       display: flex
       align-items: center
       flex-wrap: wrap
+      @include tablet
+        flex-direction: column
+        align-items: baseline
   &-item
     margin-bottom: 45px
     display: flex
     align-items: center
     flex: 50%
+    @include tablet
+      margin-bottom: 40px
     svg
       margin-right: 10px
     &-text
@@ -43,11 +61,17 @@
         font-size: 14px
         line-height: 17px
         rgba(147, 147, 147, 0.63)
+        @include mobile-portrait
+          font-size: 12px
+          line-height: 15px
       &__descr
         +montserratSemibold
         font-size: 18px
         line-height: 22px
         color: #2b2b2b
+        @include mobile-portrait
+          font-size: 15px
+          line-height: 18px
   &__additional
     display: block
     font-size: 14px
@@ -66,24 +90,43 @@
       line-height: 17
       color: #6c6c6b
   &__button
-    display: inline-block
+    display: block
     width: 100%
     max-width: 197px
     padding: 11px 0
     color: $white
+    font-size: 13px
     background-color: $blue
     +montserratSemibold
     text-transform: uppercase
     text-align: center
+    @include tablet
+      margin: 0 auto
+    @include mobile-portrait
+      max-width: 168px
+      font-size: 12px
+      line-height: 16px
+      letter-spacing: 0.01em
   &-slide
     width: 100%
     max-width: 415px
     height: 493px
-    padding: 60px 0 47px 55px
+    padding: 60px 0 47px 20px
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.06)
     border-radius: 10px
+    transition: 0.3s
+    @include laptop
+      padding-right: 20px
+    @include mobile
+      height: 400px
+      padding-top: 30px
+    &__title, &-item
+      padding-left: 55px
+      @include mobile
+        padding-left: 0
     img
-      height: 149px
+      @include mobile
+        height: 150px
     &__title
       margin: 70px 0 20px
       +furore
@@ -91,6 +134,8 @@
       line-height: 21px
       letter-spacing: 0.035em
       color: #232323
+      @include mobile
+        margin: 45px 0 30px
     &-item
       margin-bottom: 15px
       display: flex
@@ -112,6 +157,7 @@
           color: #2b2b2b
     &__button
       display: block
+      opacity: 0
       margin: 10px auto 0
       width: 100%
       max-width: 129px
@@ -124,12 +170,56 @@
       +montserratSemibold
       text-transform: uppercase
       text-align: center
+      transition: 0.3s
+      &:hover
+        opacity: 0
+      @include mobile
+        margin-top: -5px
   &-slider
-    &-arrows
+    .swiper-wrapper
+      align-items: center
+    .swiper-slide-active
+      height: 545px
+      border: 3px solid rgba(1, 72, 255, 0.42)
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 16px 30px rgba(0, 0, 0, 0.1)
+      @include mobile
+        height: 450px
+      .product
+        &-slide
+          &__button
+            opacity: 1
+            &:hover
+              opacity: 0.7
+    &-controls
       position: relative
+      margin-top: 55px
+      display: flex
+      align-items: center
+      justify-content: center
       .swiper-button-prev, .swiper-button-next
+        position: initial
+        margin-top: 0
         width: 41px
         height: 10px
+        outline: none
         &:after, &:before
           content: ''
           display: none
+      .swiper-button-prev
+        margin-right: 10px
+      .swiper-button-next
+        margin-left: 10px
+      .swiper-pagination
+        position: initial
+        display: flex
+        align-items: center
+        &-bullet
+          margin-right: 10px
+          width: 16px
+          height: 16px
+          background-color: #efefef
+          opacity: 1
+          &:last-child
+            margin-right: 0
+          &-active
+            background: #2E3DB6

@@ -98,12 +98,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_burger_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/burger-menu */ "./source/js/modules/burger-menu.js");
 /* harmony import */ var _modules_sticky_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sticky-header */ "./source/js/modules/sticky-header.js");
 /* harmony import */ var _modules_product_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/product-slider */ "./source/js/modules/product-slider.js");
+/* harmony import */ var _modules_workings_text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/workings-text */ "./source/js/modules/workings-text.js");
+
 
 
 
 Object(_modules_burger_menu__WEBPACK_IMPORTED_MODULE_0__["default"])();
 Object(_modules_sticky_header__WEBPACK_IMPORTED_MODULE_1__["default"])();
 Object(_modules_product_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
+Object(_modules_workings_text__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
 /***/ }),
 
@@ -4661,17 +4664,33 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var galleryThumbs = new _lib_swiper_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.gallery-thumbs', {
-    slidesPerView: 3,
-    freeMode: true,
+    slidesPerView: 'auto',
+    //freeMode: true,
     spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
     }
+    /* breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    } */
+
   });
   var galleryTop = new _lib_swiper_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.gallery-top', {
+    loop: true,
     thumbs: {
       swiper: galleryThumbs
     }
@@ -4703,6 +4722,54 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   window.addEventListener('scroll', stickyHeader);
+});
+
+/***/ }),
+
+/***/ "./source/js/modules/workings-text.js":
+/*!********************************************!*\
+  !*** ./source/js/modules/workings-text.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var workingsText = document.querySelectorAll('.workings-text'),
+      workingsWrap = document.querySelector('.workings-wrap');
+
+  var toggleWorkingsText = function toggleWorkingsText(index) {
+    for (var i = 0; i < workingsText.length; i++) {
+      if (index === i) {
+        workingsText[i].classList.add('workings-text-active');
+      } else {
+        workingsText[i].classList.remove('workings-text-active');
+      }
+    }
+  };
+
+  workingsWrap.addEventListener('click', function (event) {
+    var target = event.target;
+    target = target.closest('.workings-text');
+
+    if (target) {
+      workingsText.forEach(function (item, i) {
+        if (item === target) {
+          toggleWorkingsText(i);
+        }
+      });
+    }
+    /* let workingsTextActive = document.querySelector('.workings-text-active');
+    workingsTextActive.addEventListener('click', () => {
+      if (target.classList.contains('workings-text-active')) {
+        console.log(1);
+        target.classList.remove('workings-text-active');
+        console.log(2);
+      }
+    }); */
+
+  });
 });
 
 /***/ })
