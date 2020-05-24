@@ -9,7 +9,7 @@
     background-color: $white
     .header
       &-menu
-        &__link
+        a
           color: $black
   &-container 
     width: 100%
@@ -50,11 +50,11 @@
       flex-wrap: wrap
       width: 100%
       max-width: 690px
-      &__item
+      li
         margin-right: 50px
         &:last-child
           margin-right: 0
-    &__link
+    a
       font-size: 13px
       line-height: 16px
       letter-spacing: 0.05em
@@ -108,15 +108,15 @@
     &-menu
       &-list
         padding: 165px 0 0 15px
-        &__item
+        li
           margin-bottom: 35px
           &:last-child
             margin-bottom: 0
-      &__link
-        font-size: 16px
-        color: $black
-        line-height: 20px
-        letter-spacing: 0.05em
-        +montserratBold
-        text-decoration: none
-        text-transform: uppercase
+        a
+          font-size: 16px
+          color: $black
+          line-height: 20px
+          letter-spacing: 0.05em
+          +montserratBold
+          text-decoration: none
+          text-transform: uppercase
