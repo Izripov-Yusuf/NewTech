@@ -13,7 +13,7 @@ html(lang='ru')
       section.section.hero-section
         h1.hero__title беспилотный конвертоплан серии ЭРА
         picture
-          img(class="hero__img" src="../../img/hero/hero-img.png", srcet="../../img/hero/hero-img@2x.png 2x", alt="Фото конвертоплана")
+          img(class="hero__img" src="../../img/hero/hero-img.png", srcset="../../img/hero/hero-img@2x.png 2x", alt="Фото конвертоплана")
 
       section.section.presentation-section
         .container.presentation-container
@@ -25,7 +25,7 @@ html(lang='ru')
             .presentation-content
               .presentation-image
                 picture
-                  img(src="../../img/hero/era54a.png", srcet="../../img/hero/era54a@2x.png", alt="")
+                  img(src="../../img/hero/era54a.png", srcset="../../img/hero/era54a@2x.png", alt="")
               .presentation-block
                 .presentation-item
                   +svg('clock', 25, 25)
@@ -54,188 +54,187 @@ html(lang='ru')
               .advantages-item-content
                 h3.advantages__number 01
                 picture
-                  img(src="../../img/advantages/advantages-1.png", srcet="../../img/advantages/advantages-1@2x.png", alt="фото преимущества")
+                  img(src="../../img/advantages/advantages-1.png", srcset="../../img/advantages/advantages-1@2x.png", alt="фото преимущества")
               p.advantages-item__descr Высокая ветроустойчивость (до 23 м/c) в обоих режимах полета за счет изменения вектора тяги
             .advantages-item
               .advantages-item-content
                 h3.advantages__number 02
                 picture
-                  img(src="../../img/advantages/advantages-2.png", srcet="../../img/advantages/advantages-2@2x.png", alt="фото преимущества")
+                  img(src="../../img/advantages/advantages-2.png", srcset="../../img/advantages/advantages-2@2x.png", alt="фото преимущества")
               p.advantages-item__descr Поворотные механизмы двигателей обеспечивают конверсию между режимами и управление полетом без другой механизации
             .advantages-item
               .advantages-item-content
                 h3.advantages__number 03
                 picture
-                  img(src="../../img/advantages/advantages-3.png", srcet="../../img/advantages/advantages-3@2x.png", alt="фото преимущества")
+                  img(src="../../img/advantages/advantages-3.png", srcset="../../img/advantages/advantages-3@2x.png", alt="фото преимущества")
               p.advantages-item__descr Масштабируемость конструкции под задачу, простота, надежность, полевая ремонтопригодность, модульность, низкая цена
       section.section.product-section
         .container
-          .swiper-container.gallery-top
-            .swiper-wrapper
-              .product-wrap.swiper-slide
+          .gallery-top.slider-for
+            .product-wrap
+              .product-image
+                picture
+                  img(src="../../img/slider/top-slider-img.png", srcset="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
+              .product-text
+                h2.product__title КОНВЕРТОПЛАН ЭРА-54А
+                span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
+                .product-text-block
+                  .product-item
+                    +svg('speed', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Крейсерская скорость
+                      span.product-item-text__descr 90 км/ч
+                  .product-item
+                    +svg('height', 35, 35)
+                    .product-item-text
+                      span.product-item-text__title Высота полёта до
+                      span.product-item-text__descr 2000 м
+                  .product-item
+                    +svg('distance', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Дальность действия
+                      span.product-item-text__descr 300 км.
+                  .product-item
+                    +svg('clock', 33, 33)
+                    .product-item-text
+                      span.product-item-text__title Время полёта
+                      span.product-item-text__descr до 2 часов
+                span.product__additional Дополнительные опции
+                select(size="1").product-additional-select
+                  option(value="Система парашюта") Система парашюта
+                a(href="#").button.product__button ПОДРОБНЕЕ
+            .product-wrap
+              .product-image
+                picture
+                  img(src="../../img/slider/top-slider-img.png", srcset="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
+              .product-text
+                h2.product__title КОНВЕРТОПЛАН ЭРА-54А
+                span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
+                .product-text-block
+                  .product-item
+                    +svg('speed', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Крейсерская скорость
+                      span.product-item-text__descr 90 км/ч
+                  .product-item
+                    +svg('height', 35, 35)
+                    .product-item-text
+                      span.product-item-text__title Высота полёта до
+                      span.product-item-text__descr 2000 м
+                  .product-item
+                    +svg('distance', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Дальность действия
+                      span.product-item-text__descr 300 км.
+                  .product-item
+                    +svg('clock', 33, 33)
+                    .product-item-text
+                      span.product-item-text__title Время полёта
+                      span.product-item-text__descr до 2 часов
+                span.product__additional Дополнительные опции
+                select(size="1").product-additional-select
+                  option(value="Система парашюта") Система парашюта
+                a(href="#").button.product__button ПОДРОБНЕЕ
+            .product-wrap
+              .product-image
+                picture
+                  img(src="../../img/slider/top-slider-img.png", srcset="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
+              .product-text
+                h2.product__title КОНВЕРТОПЛАН ЭРА-54А
+                span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
+                .product-text-block
+                  .product-item
+                    +svg('speed', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Крейсерская скорость
+                      span.product-item-text__descr 90 км/ч
+                  .product-item
+                    +svg('height', 35, 35)
+                    .product-item-text
+                      span.product-item-text__title Высота полёта до
+                      span.product-item-text__descr 2000 м
+                  .product-item
+                    +svg('distance', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Дальность действия
+                      span.product-item-text__descr 300 км.
+                  .product-item
+                    +svg('clock', 33, 33)
+                    .product-item-text
+                      span.product-item-text__title Время полёта
+                      span.product-item-text__descr до 2 часов
+                span.product__additional Дополнительные опции
+                select(size="1").product-additional-select
+                  option(value="Система парашюта") Система парашюта
+                a(href="#").button.product__button ПОДРОБНЕЕ
+            .product-wrap
+              .product-image
+                picture
+                  img(src="../../img/slider/top-slider-img.png", srcset="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
+              .product-text
+                h2.product__title КОНВЕРТОПЛАН ЭРА-54А
+                span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
+                .product-text-block
+                  .product-item
+                    +svg('speed', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Крейсерская скорость
+                      span.product-item-text__descr 90 км/ч
+                  .product-item
+                    +svg('height', 35, 35)
+                    .product-item-text
+                      span.product-item-text__title Высота полёта до
+                      span.product-item-text__descr 2000 м
+                  .product-item
+                    +svg('distance', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Дальность действия
+                      span.product-item-text__descr 300 км.
+                  .product-item
+                    +svg('clock', 33, 33)
+                    .product-item-text
+                      span.product-item-text__title Время полёта
+                      span.product-item-text__descr до 2 часов
+                span.product__additional Дополнительные опции
+                select(size="1").product-additional-select
+                  option(value="Система парашюта") Система парашюта
+                a(href="#").button.product__button ПОДРОБНЕЕ
+            .product-wrap
+              .product-image
+                picture
+                  img(src="../../img/slider/top-slider-img.png", srcset="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
+              .product-text
+                h2.product__title КОНВЕРТОПЛАН ЭРА-54А
+                span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
+                .product-text-block
+                  .product-item
+                    +svg('speed', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Крейсерская скорость
+                      span.product-item-text__descr 90 км/ч
+                  .product-item
+                    +svg('height', 35, 35)
+                    .product-item-text
+                      span.product-item-text__title Высота полёта до
+                      span.product-item-text__descr 2000 м
+                  .product-item
+                    +svg('distance', 35, 26)
+                    .product-item-text
+                      span.product-item-text__title Дальность действия
+                      span.product-item-text__descr 300 км.
+                  .product-item
+                    +svg('clock', 33, 33)
+                    .product-item-text
+                      span.product-item-text__title Время полёта
+                      span.product-item-text__descr до 2 часов
+                span.product__additional Дополнительные опции
+                select(size="1").product-additional-select
+                  option(value="Система парашюта") Система парашюта
+                a(href="#").button.product__button ПОДРОБНЕЕ
+            .product-wrap
                 .product-image
                   picture
-                    img(src="../../img/slider/top-slider-img.png", srcet="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
-                .product-text
-                  h2.product__title КОНВЕРТОПЛАН ЭРА-54А
-                  span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
-                  .product-text-block
-                    .product-item
-                      +svg('speed', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Крейсерская скорость
-                        span.product-item-text__descr 90 км/ч
-                    .product-item
-                      +svg('height', 35, 35)
-                      .product-item-text
-                        span.product-item-text__title Высота полёта до
-                        span.product-item-text__descr 2000 м
-                    .product-item
-                      +svg('distance', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Дальность действия
-                        span.product-item-text__descr 300 км.
-                    .product-item
-                      +svg('clock', 33, 33)
-                      .product-item-text
-                        span.product-item-text__title Время полёта
-                        span.product-item-text__descr до 2 часов
-                  span.product__additional Дополнительные опции
-                  select(size="1").product-additional-select
-                    option(value="Система парашюта") Система парашюта
-                  a(href="#").button.product__button ПОДРОБНЕЕ
-              .product-wrap.swiper-slide
-                .product-image
-                  picture
-                    img(src="../../img/slider/top-slider-img.png", srcet="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
-                .product-text
-                  h2.product__title КОНВЕРТОПЛАН ЭРА-54А
-                  span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
-                  .product-text-block
-                    .product-item
-                      +svg('speed', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Крейсерская скорость
-                        span.product-item-text__descr 90 км/ч
-                    .product-item
-                      +svg('height', 35, 35)
-                      .product-item-text
-                        span.product-item-text__title Высота полёта до
-                        span.product-item-text__descr 2000 м
-                    .product-item
-                      +svg('distance', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Дальность действия
-                        span.product-item-text__descr 300 км.
-                    .product-item
-                      +svg('clock', 33, 33)
-                      .product-item-text
-                        span.product-item-text__title Время полёта
-                        span.product-item-text__descr до 2 часов
-                  span.product__additional Дополнительные опции
-                  select(size="1").product-additional-select
-                    option(value="Система парашюта") Система парашюта
-                  a(href="#").button.product__button ПОДРОБНЕЕ
-              .product-wrap.swiper-slide
-                .product-image
-                  picture
-                    img(src="../../img/slider/top-slider-img.png", srcet="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
-                .product-text
-                  h2.product__title КОНВЕРТОПЛАН ЭРА-54А
-                  span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
-                  .product-text-block
-                    .product-item
-                      +svg('speed', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Крейсерская скорость
-                        span.product-item-text__descr 90 км/ч
-                    .product-item
-                      +svg('height', 35, 35)
-                      .product-item-text
-                        span.product-item-text__title Высота полёта до
-                        span.product-item-text__descr 2000 м
-                    .product-item
-                      +svg('distance', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Дальность действия
-                        span.product-item-text__descr 300 км.
-                    .product-item
-                      +svg('clock', 33, 33)
-                      .product-item-text
-                        span.product-item-text__title Время полёта
-                        span.product-item-text__descr до 2 часов
-                  span.product__additional Дополнительные опции
-                  select(size="1").product-additional-select
-                    option(value="Система парашюта") Система парашюта
-                  a(href="#").button.product__button ПОДРОБНЕЕ
-              .product-wrap.swiper-slide
-                .product-image
-                  picture
-                    img(src="../../img/slider/top-slider-img.png", srcet="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
-                .product-text
-                  h2.product__title КОНВЕРТОПЛАН ЭРА-54А
-                  span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
-                  .product-text-block
-                    .product-item
-                      +svg('speed', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Крейсерская скорость
-                        span.product-item-text__descr 90 км/ч
-                    .product-item
-                      +svg('height', 35, 35)
-                      .product-item-text
-                        span.product-item-text__title Высота полёта до
-                        span.product-item-text__descr 2000 м
-                    .product-item
-                      +svg('distance', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Дальность действия
-                        span.product-item-text__descr 300 км.
-                    .product-item
-                      +svg('clock', 33, 33)
-                      .product-item-text
-                        span.product-item-text__title Время полёта
-                        span.product-item-text__descr до 2 часов
-                  span.product__additional Дополнительные опции
-                  select(size="1").product-additional-select
-                    option(value="Система парашюта") Система парашюта
-                  a(href="#").button.product__button ПОДРОБНЕЕ
-              .product-wrap.swiper-slide
-                .product-image
-                  picture
-                    img(src="../../img/slider/top-slider-img.png", srcet="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
-                .product-text
-                  h2.product__title КОНВЕРТОПЛАН ЭРА-54А
-                  span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
-                  .product-text-block
-                    .product-item
-                      +svg('speed', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Крейсерская скорость
-                        span.product-item-text__descr 90 км/ч
-                    .product-item
-                      +svg('height', 35, 35)
-                      .product-item-text
-                        span.product-item-text__title Высота полёта до
-                        span.product-item-text__descr 2000 м
-                    .product-item
-                      +svg('distance', 35, 26)
-                      .product-item-text
-                        span.product-item-text__title Дальность действия
-                        span.product-item-text__descr 300 км.
-                    .product-item
-                      +svg('clock', 33, 33)
-                      .product-item-text
-                        span.product-item-text__title Время полёта
-                        span.product-item-text__descr до 2 часов
-                  span.product__additional Дополнительные опции
-                  select(size="1").product-additional-select
-                    option(value="Система парашюта") Система парашюта
-                  a(href="#").button.product__button ПОДРОБНЕЕ
-              .product-wrap.swiper-slide
-                .product-image
-                  picture
-                    img(src="../../img/slider/top-slider-img.png", srcet="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
+                    img(src="../../img/slider/top-slider-img.png", srcset="../../img/slider/top-slider-img@2x.png 2x", alt="фото конвертоплана")
                 .product-text
                   h2.product__title КОНВЕРТОПЛАН ЭРА-54А
                   span.product__descr Многоцелевой конвертоплан с влагозащищенной силовой установкой
@@ -265,41 +264,85 @@ html(lang='ru')
                     option(value="Система парашюта") Система парашюта
                   a(href="#").button.product__button ПОДРОБНЕЕ
           h2.product__title.product__title--second Наша продукция
-          .product-slider.swiper-container.gallery-thumbs
-            .swiper-wrapper
-              .product-slide.swiper-slide
+          .product-slider.slider-nav
+            .product-slide
+              picture
+                img(src="../../img/slider/slider-img-1.png", srcset="../../img/slider/slider-img-1@2x.png", alt="Фотография конвертоплана")
+              h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54К
+              .product-slide-item
+                +svg('clock', 30, 30)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Время полёта
+                  span.product-slide-item-text__descr 90 км/ч
+              .product-slide-item
+                +svg('weight', 31, 33)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Полезной нагрузки до
+                  span.product-slide-item-text__descr 300 км.
+              a(href="#").button.product-slide__button ПОДРОБНЕЕ
+            .product-slide
+              picture
+                img(src="../../img/slider/slider-img-2.png", srcset="../../img/slider/slider-img-2@2x.png", alt="Фотография конвертоплана")
+              h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54Т
+              .product-slide-item
+                +svg('clock', 30, 30)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Время полёта
+                  span.product-slide-item-text__descr 90 км/ч
+              .product-slide-item
+                +svg('weight', 31, 33)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Полезной нагрузки до
+                  span.product-slide-item-text__descr 300 км.
+              a(href="#").button.product-slide__button ПОДРОБНЕЕ
+            .product-slide
+              picture
+                img(src="../../img/slider/slider-img-3.png", srcset="../../img/slider/slider-img-3@2x.png", alt="Фотография конвертоплана")
+              h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54Д
+              .product-slide-item
+                +svg('clock', 30, 30)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Время полёта
+                  span.product-slide-item-text__descr 90 км/ч
+              .product-slide-item
+                +svg('weight', 31, 33)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Полезной нагрузки до
+                  span.product-slide-item-text__descr 300 км.
+              a(href="#").button.product-slide__button ПОДРОБНЕЕ
+            .product-slide
+              picture
+                img(src="../../img/slider/slider-img-1.png", srcset="../../img/slider/slider-img-1@2x.png", alt="Фотография конвертоплана")
+              h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54К
+              .product-slide-item
+                +svg('clock', 30, 30)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Время полёта
+                  span.product-slide-item-text__descr 90 км/ч
+              .product-slide-item
+                +svg('weight', 31, 33)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Полезной нагрузки до
+                  span.product-slide-item-text__descr 300 км.
+              a(href="#").button.product-slide__button ПОДРОБНЕЕ
+            .product-slide
+              picture
+                img(src="../../img/slider/slider-img-2.png", srcset="../../img/slider/slider-img-2@2x.png", alt="Фотография конвертоплана")
+              h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54Т
+              .product-slide-item
+                +svg('clock', 30, 30)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Время полёта
+                  span.product-slide-item-text__descr 90 км/ч
+              .product-slide-item
+                +svg('weight', 31, 33)
+                .product-slide-item-text
+                  span.product-slide-item-text__title Полезной нагрузки до
+                  span.product-slide-item-text__descr 300 км.
+              a(href="#").button.product-slide__button ПОДРОБНЕЕ
+            .product-slide
                 picture
-                  img(src="../../img/slider/slider-img-1.png", srcet="../../img/slider/slider-img-1@2x.png", alt="Фотография конвертоплана")
-                h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54К
-                .product-slide-item
-                  +svg('clock', 30, 30)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Время полёта
-                    span.product-slide-item-text__descr 90 км/ч
-                .product-slide-item
-                  +svg('weight', 31, 33)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Полезной нагрузки до
-                    span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
-              .product-slide.swiper-slide
-                picture
-                  img(src="../../img/slider/slider-img-2.png", srcet="../../img/slider/slider-img-2@2x.png", alt="Фотография конвертоплана")
-                h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54Т
-                .product-slide-item
-                  +svg('clock', 30, 30)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Время полёта
-                    span.product-slide-item-text__descr 90 км/ч
-                .product-slide-item
-                  +svg('weight', 31, 33)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Полезной нагрузки до
-                    span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
-              .product-slide.swiper-slide
-                picture
-                  img(src="../../img/slider/slider-img-3.png", srcet="../../img/slider/slider-img-3@2x.png", alt="Фотография конвертоплана")
+                  img(src="../../img/slider/slider-img-3.png", srcset="../../img/slider/slider-img-3@2x.png", alt="Фотография конвертоплана")
                 h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54Д
                 .product-slide-item
                   +svg('clock', 30, 30)
@@ -312,78 +355,36 @@ html(lang='ru')
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
                 a(href="#").button.product-slide__button ПОДРОБНЕЕ
-              .product-slide.swiper-slide
-                picture
-                  img(src="../../img/slider/slider-img-1.png", srcet="../../img/slider/slider-img-1@2x.png", alt="Фотография конвертоплана")
-                h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54К
-                .product-slide-item
-                  +svg('clock', 30, 30)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Время полёта
-                    span.product-slide-item-text__descr 90 км/ч
-                .product-slide-item
-                  +svg('weight', 31, 33)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Полезной нагрузки до
-                    span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
-              .product-slide.swiper-slide
-                picture
-                  img(src="../../img/slider/slider-img-2.png", srcet="../../img/slider/slider-img-2@2x.png", alt="Фотография конвертоплана")
-                h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54Т
-                .product-slide-item
-                  +svg('clock', 30, 30)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Время полёта
-                    span.product-slide-item-text__descr 90 км/ч
-                .product-slide-item
-                  +svg('weight', 31, 33)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Полезной нагрузки до
-                    span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
-              .product-slide.swiper-slide
-                picture
-                  img(src="../../img/slider/slider-img-3.png", srcet="../../img/slider/slider-img-3@2x.png", alt="Фотография конвертоплана")
-                h3.product-slide__title КОНВЕРТОПЛАН ЭРА-54Д
-                .product-slide-item
-                  +svg('clock', 30, 30)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Время полёта
-                    span.product-slide-item-text__descr 90 км/ч
-                .product-slide-item
-                  +svg('weight', 31, 33)
-                  .product-slide-item-text
-                    span.product-slide-item-text__title Полезной нагрузки до
-                    span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
-            .product-slider-controls
-              .swiper-button-prev
-                +svg('left-arrow', 41, 10)
-              .swiper-pagination
-              .swiper-button-next
-                +svg('right-arrow', 41, 10)
+          .product-slider-controls
+            .slider-button-prev
+              +svg('left-arrow', 41, 10)
+            .slider-pagination
+            .slider-button-next
+              +svg('right-arrow', 41, 10)
       section.section.workings-section
         .container
           h2.section__title.workings__title Перспективные разработки
           span.workings__subtitle Наши текущие разработки
           .workings-wrap
             .workings-item
-              img(src="img/workings/workings-1.png", srcet="img/workings/workings-1@2x.png 2x", alt="Фото разработки")
+              img(src="img/workings/workings-1.png", srcset="img/workings/workings-1@2x.png 2x", alt="Фото разработки")
               h3.workings__number 01
               .workings-text
                 h4.workings-text__title ЭРА-72
                 p.workings-text__descr взлетный вес от 30 до 90 кг. и увеличенная скорость полета до 300 км/ч с применением ВИШ и защитой от РЭБ.
             .workings-item
-              img(src="img/workings/workings-2.png" srcet="img/workings/workings-2@2x.png 2x", alt="Фото разработки")
+              img(src="img/workings/workings-2.png" srcset="img/workings/workings-2@2x.png 2x", alt="Фото разработки")
               h3.workings__number 02
               .workings-text
                 h4.workings-text__title ГРузовой байк
                 p.workings-text__descr взлетный вес от 30 до 90 кг. и увеличенная скорость полета до 300 км/ч с применением ВИШ и защитой от РЭБ.
             .workings-item
-              img(src="img/workings/workings-3.png", srcet="img/workings/workings-3@2x.png 2x", alt="Фото разработки")
+              img(src="img/workings/workings-3.png", srcset="img/workings/workings-3@2x.png 2x", alt="Фото разработки")
               h3.workings__number 03
               .workings-text
                 h4.workings-text__title Аэротакси
                 p.workings-text__descr взлетный вес от 30 до 90 кг. и увеличенная скорость полета до 300 км/ч с применением ВИШ и защитой от РЭБ.
+      
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    script(src="js/slick.min.js")
     script(src="js/main.js")

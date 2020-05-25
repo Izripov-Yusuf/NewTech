@@ -1,35 +1,29 @@
-import Swiper from '../lib/swiper.min.js';
+/* import Slick from '../lib/slick.min.js'; */
 
 export default () => {
-  let galleryThumbs = new Swiper('.gallery-thumbs', {
-    slidesPerView: 'auto',
-    //freeMode: true,
-    spaceBetween: 20,
-    centeredSlides: true,
-    loop: true,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    /* breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    } */
+  $('.slider-for').slick({
+    asNavFor: '.slider-nav',
+    arrows: false,
   });
-  let galleryTop = new Swiper('.gallery-top', {
-    loop: true,
-    thumbs: {
-      swiper: galleryThumbs
-    },
+
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerPadding: 0,
+    nextArrow: $('.slider-button-next'),
+    prevArrow: $('.slider-button-prev'),
+    asNavFor: '.slider-for',
+    dots: true,
+    appendDots: $('.slider-pagination'),
+    centerMode: true,
+    focusOnSelect: true,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          //centerPadding: '150px',
+        }
+      },
+    ]
   });
 };
