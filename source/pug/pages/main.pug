@@ -384,7 +384,48 @@ html(lang='ru')
               .workings-text
                 h4.workings-text__title Аэротакси
                 p.workings-text__descr взлетный вес от 30 до 90 кг. и увеличенная скорость полета до 300 км/ч с применением ВИШ и защитой от РЭБ.
-      
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+      section.section.video-section
+        .container
+          .video-slider
+            .video-slide
+              video(preload="metadata" controls playsinline)
+                source(src="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+                object(data="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+                  param(name="movie" value="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+            .video-slide
+              video(preload="metadata" controls playsinline)
+                source(src="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+                object(data="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+                  param(name="movie" value="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+            .video-slide
+              video(preload="metadata" controls playsinline)
+                source(src="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+                object(data="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+                  param(name="movie" value="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
+          .video-slider-arrows
+            .video-slider-prev
+              +svg('big-left-arrow', 33, 45)
+            .video-slider-next
+              +svg('big-right-arrow', 33, 45)
+      section.section.form-section
+        .container
+          h2.section__title.form-section__title СВЯЗАТЬСЯ С НАМИ
+          .form-wrap
+            .form-wrap-backgrounder
+              h3.backgrounder__title Заполните форму
+              p.backgrounder__subtitle Мы свяжемся с вами любым удобным для вас способом
+            .form-wrap-data
+              form(action="#")
+                input.name(type="text" placeholder="Ваше имя")
+                input.email(type="email" placeholder="Ваш E-mail")
+                input.tel(type="tel" placeholder="Ваш номер телефона")
+                select(size="1")
+                  option(value="Интересующая модель конвертоплана") Интересующая модель
+                  option(value="КОНВЕРТОПЛАН ЭРА-54Т") КОНВЕРТОПЛАН ЭРА-54Т
+                  option(value="КОНВЕРТОПЛАН ЭРА-54Д") КОНВЕРТОПЛАН ЭРА-54Д
+                  option(value="КОНВЕРТОПЛАН ЭРА-54A") КОНВЕРТОПЛАН ЭРА-54A
+                textarea(name="" placeholder="Ваше сообщение")
+                input.button.form__button(type="submit", value="ОТПРАВИТЬ")
+    script(src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous")
     script(src="js/slick.min.js")
     script(src="js/main.js")

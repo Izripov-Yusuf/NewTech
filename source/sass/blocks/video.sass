@@ -1,0 +1,23 @@
+.video
+  &-slide
+    margin: 0 25px 0 0
+    @include tablet
+      margin: 0 10px 0 0
+    video
+      max-width: 100%
+  &-slider
+    &-arrows
+      margin: 55px auto 0
+      width: 100%
+      max-width: 845px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      @include mobile
+        margin-top: 30px
+      .video-slider-prev, .video-slider-next
+        cursor: pointer
+    .slick-list
+      margin: 0 -25px 0 0
+      @include tablet
+        margin: 0 -10px 0 0
