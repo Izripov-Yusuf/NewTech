@@ -160,9 +160,10 @@ __webpack_require__.r(__webpack_exports__);
     centerMode: true,
     focusOnSelect: true,
     responsive: [{
-      breakpoint: 1024,
+      breakpoint: 1030,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 1,
+        centerMode: false
       }
     }]
   });
