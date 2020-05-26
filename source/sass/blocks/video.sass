@@ -17,6 +17,10 @@
         margin-top: 30px
       .video-slider-prev, .video-slider-next
         cursor: pointer
+        svg
+          @include mobile
+            max-width: 16px !important
+            max-height: 22px !important
     .slick-list
       margin: 0 -25px 0 0
       @include tablet
