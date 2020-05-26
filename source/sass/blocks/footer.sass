@@ -1,0 +1,77 @@
+.footer
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &-dark, &-light
+    flex: 0 50%
+  &-dark
+    display: flex
+    justify-content: flex-end
+    padding: 30px 45px 0 80px
+    background-color: #222
+    @include mobile
+      padding: 35px 15px 0 15px
+    &-list
+      column-count: 2
+      column-gap: 90px
+      @include tablet
+        column-count: 1
+        column-gap: 0px
+      li
+        margin-bottom: 25px
+        &:nth-child(4)
+          margin-bottom: 0
+        a
+          display: inline-block
+          +montserratMed
+          font-size: 22px
+          line-height: 100%
+          color: $white
+          @include mobile
+            font-size: 15px
+  &-light
+    padding: 65px 0 60px 100px
+    @include tablet
+      padding-left: 10px
+    @include mobile
+      padding: 25px 0 0 10px
+    &__title
+      margin-bottom: 10px
+      font-size: 29px
+      line-height: 35px
+      letter-spacing: 0.01em
+      +montserratBold
+      @include mobile
+        margin-bottom: 20px
+        font-size: 16px
+        line-height: 20px
+    &-links
+      width: 100%
+      max-width: 455px
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+      a
+        margin: 0 10px 20px 0
+        width: 100%
+        max-width: 217px
+        padding: 20px 40px 20px 24px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.13)
+        border-radius: 9px
+        @include mobile
+          max-width: 170px
+          padding: 10px 10px 10px 15px
+        span
+          +montserratMed
+          font-size: 16px
+          line-height: 20px
+          color: #4D4D4D
+          text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.13)
+          @include mobile
+            font-size: 11px
+        svg
+          fill: transparent

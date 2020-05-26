@@ -1,13 +1,13 @@
 include ../global/head
 include ../global/header
-//- include ../global/footer
+include ../global/footer
 include ../components/svg
 
 doctype html
 html(lang='ru')
   +head('Новые технологии')
   body
-    +header(pageName)
+    +header('Главная страница')
 
     main
       section.section.hero-section
@@ -15,7 +15,7 @@ html(lang='ru')
         picture
           img(class="hero__img" src="../../img/hero/hero-img.png", srcset="../../img/hero/hero-img@2x.png 2x", alt="Фото конвертоплана")
 
-      section.section.presentation-section
+      section.section.presentation-section(id="presentation")
         .container.presentation-container
           .presentation-wrap
             .presentation-text
@@ -46,7 +46,7 @@ html(lang='ru')
                     span.presentation-item-text__descr до 23 м/c
                 .presentation-item
                   a(href="#").button.presentation__button ПОДРОБНЕЕ
-      section.section.advantages-section
+      section.section.advantages-section(id="advantages")
         .container
           h2.section__title.advantages__title ПРЕИМУЩЕСТВА КОНВЕРТОПЛАНОВ серии ЭРА
           .advantages-wrap
@@ -263,7 +263,7 @@ html(lang='ru')
                   select(size="1").product-additional-select
                     option(value="Система парашюта") Система парашюта
                   a(href="#").button.product__button ПОДРОБНЕЕ
-          h2.product__title.product__title--second Наша продукция
+          h2.product__title.product__title--second(id="decision") Наша продукция
           .product-slider.slider-nav
             .slide-wrap
               .product-slide
@@ -413,7 +413,7 @@ html(lang='ru')
               +svg('big-left-arrow', 33, 45)
             .video-slider-next
               +svg('big-right-arrow', 33, 45)
-      section.section.form-section
+      section.section.form-section(id="contact")
         .container
           h2.section__title.form-section__title СВЯЗАТЬСЯ С НАМИ
           .form-wrap
@@ -424,7 +424,7 @@ html(lang='ru')
               form(action="#")
                 input.name(type="text" placeholder="Ваше имя")
                 input.email(type="email" placeholder="Ваш E-mail")
-                input.tel(type="tel" placeholder="Ваш номер телефона")
+                input.tel(id="tel", type="tel" placeholder="Ваш номер телефона")
                 select(size="1")
                   option(value="Интересующая модель конвертоплана") Интересующая модель
                   option(value="КОНВЕРТОПЛАН ЭРА-54Т") КОНВЕРТОПЛАН ЭРА-54Т
@@ -432,6 +432,59 @@ html(lang='ru')
                   option(value="КОНВЕРТОПЛАН ЭРА-54A") КОНВЕРТОПЛАН ЭРА-54A
                 textarea(name="" placeholder="Ваше сообщение")
                 input.button.form__button(type="submit", value="ОТПРАВИТЬ")
+      section.section.news-section(id="news")
+        .container
+          h2.section__title.news-section__title новости
+          .news-wrap
+            .news-item
+              .news-image
+                picture
+                img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
+              .news-text
+                .news-text-block
+                  h3.news-text-block__title Новость 1
+                  span.news-text-block__subtitle Подзаголовок новости 1
+                a.button.news-text-block__button(href="#") ЧИТАТЬ
+            .news-item
+              .news-image
+                picture
+                img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
+              .news-text
+                .news-text-block
+                  h3.news-text-block__title Новость 2
+                  span.news-text-block__subtitle Подзаголовок новости 2
+                a.button.news-text-block__button(href="#") ЧИТАТЬ
+            .news-item
+              .news-image
+                picture
+                img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
+              .news-text
+                .news-text-block
+                  h3.news-text-block__title Новость 3
+                  span.news-text-block__subtitle Подзаголовок новости 3
+                a.button.news-text-block__button(href="#") ЧИТАТЬ
+      section.section.pattern-section
+        .container
+        .pattern-content
+          .pattern-image
+            picture
+              img(src="img/pattern/pattern.png", srcset="img/pattern/pattern@2x.png 2x", alt="Фото схемы конвертоплана")
+          .pattern-lines
+            img(src="img/pattern/lines.png", alt="Линии")
+          .pattern-text
+            .pattern-text-block
+              h3.pattern-text-block__title Влагозащищенные<br> сервоприводы
+              p.pattern-text-block__descr Позволяет работать в<br> сложных погодных<br> условиях
+            .pattern-text-block
+              h3.pattern-text-block__title Генераторная установка<br> с защитным кожухом
+              p.pattern-text-block__descr Обеспечивает дополнительную<br> защиту от внешних факторов
+            .pattern-text-block
+              h3.pattern-text-block__title Карбоновый фюзеляж
+              p.pattern-text-block__descr Позволяет облегчить общую<br> массу БПЛА и лететь лучше
+            .pattern-text-block
+              h3.pattern-text-block__title Детали из алюминия и<br> ABC пластика
+              p.pattern-text-block__descr Лёгкий и прочный корпус<br> позволяет увеличить<br> полезную нагрузку
+    +footer('Главная страница')
     script(src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous")
     script(src="js/slick.min.js")
     script(src="js/main.js")

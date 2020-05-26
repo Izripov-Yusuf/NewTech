@@ -1,31 +1,32 @@
 mixin header(pageName)
   header.header
     .header-container
-      .header-logo
-        +svg('logo', 65, 26)
-        .header-logo-text
-          span.brand__name НОВЫЕ ТЕХНОЛОГИИ
-          span.brand__inn ИНН 7708701535
+      a(href="#")
+        .header-logo
+          +svg('logo', 65, 26)
+          .header-logo-text
+            span.brand__name НОВЫЕ ТЕХНОЛОГИИ
+            span.brand__inn ИНН 7708701535
       .header-menu
         ul.header-menu-list
           li.header-menu-list__item
-            a.header-menu__link(href="#") Области применения
+            a.header-menu__link(href="#advantages") Области применения
           li.header-menu-list__item
-            a.header-menu__link(href="#") Беспилотная авиация
+            a.header-menu__link(href="#presentation") Беспилотная авиация
           li.header-menu-list__item
-            a.header-menu__link(href="#") Решения
+            a.header-menu__link(href="#decision") Решения
           li.header-menu-list__item
-            a.header-menu__link(href="#") Контакты
+            a.header-menu__link(href="#footer") Контакты
       .header-burger
         span.burger
   header.header--mobile
     .header--mobile-close ×
     ul.header--mobile-menu-list
       li.header--mobile-menu-list__item
-        a.header--mobile-menu__link(href="#") Области применения
+        a.header--mobile-menu__link(href="#advantages") Области применения
       li.header--mobile-menu-list__item
-        a.header--mobile-menu__link(href="#") Беспилотная авиация
+        a.header--mobile-menu__link(href="#presentation") Беспилотная авиация
       li.header--mobile-menu-list__item
-        a.header--mobile-menu__link(href="#") Решения
+        a.header--mobile-menu__link(href="#decision") Решения
       li.header--mobile-menu-list__item
-        a.header--mobile-menu__link(href="#") Контакты
+        a.header--mobile-menu__link(href="#footer") Контакты

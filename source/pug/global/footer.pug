@@ -1,1 +1,28 @@
-
+mixin footer(pageName)
+  footer.footer(id="footer")
+    .footer-wrap
+      .footer-dark
+        ul.footer-dark-list
+          li
+            a(href="#") Главная
+          li
+            a(href="#footer") Контакты
+          li
+            a(href="#decision") Модельный ряд
+          li
+            a(href="#advantages") Преимущества
+          li
+            a(href="#news") Новости
+          li
+            a(href="#") Юридическая информация
+          li
+            a(href="#contact") Связаться с нами
+      .footer-light
+        h2.footer-light__title НОВЫЕ ТЕХНОЛОГИИ
+        .footer-light-links
+          a(href="tel:+74950057763")
+            +svg('phone', 14, 14)
+            span 8(495)005-77-63
+          a(href="mailto:mail@mail.ru")
+            +svg('mail', 16, 12)
+            span mail@mail.ru

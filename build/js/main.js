@@ -99,6 +99,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sticky_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sticky-header */ "./source/js/modules/sticky-header.js");
 /* harmony import */ var _modules_product_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/product-slider */ "./source/js/modules/product-slider.js");
 /* harmony import */ var _modules_workings_text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/workings-text */ "./source/js/modules/workings-text.js");
+/* harmony import */ var _modules_maskPhone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/maskPhone */ "./source/js/modules/maskPhone.js");
+/* harmony import */ var _modules_smoothScrollToBlock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/smoothScrollToBlock */ "./source/js/modules/smoothScrollToBlock.js");
+
+
 
 
 
@@ -107,6 +111,8 @@ Object(_modules_burger_menu__WEBPACK_IMPORTED_MODULE_0__["default"])();
 Object(_modules_sticky_header__WEBPACK_IMPORTED_MODULE_1__["default"])();
 Object(_modules_product_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
 Object(_modules_workings_text__WEBPACK_IMPORTED_MODULE_3__["default"])();
+Object(_modules_maskPhone__WEBPACK_IMPORTED_MODULE_4__["default"])();
+Object(_modules_smoothScrollToBlock__WEBPACK_IMPORTED_MODULE_5__["default"])();
 
 /***/ }),
 
@@ -130,6 +136,71 @@ __webpack_require__.r(__webpack_exports__);
     headerMobile.classList.remove('header--mobile-active');
   });
 });
+
+/***/ }),
+
+/***/ "./source/js/modules/maskPhone.js":
+/*!****************************************!*\
+  !*** ./source/js/modules/maskPhone.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var maskPhone = function maskPhone() {
+  function maskPhoneFunc(selector) {
+    var masked = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '+7 (___) ___-__-__';
+    var elem = document.querySelector(selector);
+
+    function mask(event) {
+      var keyCode = event.keyCode;
+      var template = masked,
+          def = template.replace(/\D/g, ""),
+          val = this.value.replace(/\D/g, "");
+      var i = 0,
+          newValue = template.replace(/[_\d]/g, function (a) {
+        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+      });
+      i = newValue.indexOf("_");
+
+      if (i != -1) {
+        newValue = newValue.slice(0, i);
+      }
+
+      var reg = template.substr(0, this.value.length).replace(/_+/g, function (a) {
+        return "\\d{1," + a.length + "}";
+      }).replace(/[+()]/g, "\\$&");
+      reg = new RegExp("^" + reg + "$");
+
+      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+        this.value = newValue;
+      }
+
+      if (event.type == "blur" && this.value.length < 5) {
+        this.value = "";
+      }
+    }
+
+    elem.addEventListener("input", mask);
+    elem.addEventListener("focus", mask);
+    elem.addEventListener("blur", mask);
+  }
+
+  maskPhoneFunc('#tel');
+  /* const inputValidation = () => {
+    const body = document.querySelector('body');
+    body.addEventListener('input', (event) => {
+      let target = event.target;
+      if (target.matches('input[name="name"]')) {
+        target.value = target.value.replace(/[^а-яА-Я,.!?"';: ]/, '');
+      }
+    });
+  };
+  inputValidation(); */
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (maskPhone);
 
 /***/ }),
 
@@ -179,6 +250,57 @@ __webpack_require__.r(__webpack_exports__);
 
   });
 });
+
+/***/ }),
+
+/***/ "./source/js/modules/smoothScrollToBlock.js":
+/*!**************************************************!*\
+  !*** ./source/js/modules/smoothScrollToBlock.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// Плавное перемещение по якорям
+var smoothScrollToBlock = function smoothScrollToBlock() {
+  var menuAnchors = document.querySelectorAll('a[href^="#"]'); //console.log('footerMenuAnchors: ', footerMenuAnchors);
+
+  console.log('menuAnchors: ', menuAnchors);
+
+  var _iterator = _createForOfIteratorHelper(menuAnchors),
+      _step;
+
+  try {
+    var _loop = function _loop() {
+      var anchor = _step.value;
+      anchor.addEventListener('click', function (event) {
+        event.preventDefault();
+        var blockId = anchor.getAttribute('href');
+        document.querySelector(blockId).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    };
+
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      _loop();
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (smoothScrollToBlock);
 
 /***/ }),
 

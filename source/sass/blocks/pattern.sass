@@ -1,0 +1,74 @@
+.pattern
+  &-section
+    margin-bottom: 200px
+    //height: 100%
+    height: 895px
+    @include mobile
+      display: none
+  &-content
+    height: 100%
+    position: relative
+    padding-top: 195px
+  &-image
+    margin: 0 auto
+    width: 100%
+    max-width: 795px
+    img
+      width: 100%
+      @include laptop
+        margin: 0 auto
+        max-width: 700px
+  &-text
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0%)
+    width: 100%
+    max-width: 940px
+    height: 100%
+    max-height: 895px
+    &-block
+      position: absolute
+      &:first-child
+        top: 0.1%
+        left: 26%
+        @include laptop
+          top: 3%
+          left: 28%
+      &:nth-child(2)
+        top: 9.5%
+        left: 72%
+        @include laptop
+          top: 10.5%
+          left: 70%
+      &:nth-child(3)
+        bottom: 30%
+        left: 77.5%
+        @include laptop
+          bottom: 36.5%
+          left: 74.5%
+      &:last-child
+        bottom: 0.6%
+        left: 26%
+        @include laptop
+          bottom: 11.6%
+      &__title
+        margin-bottom: 10px
+        font-size: 20px
+        line-height: 24px
+        color: #2b2b2b
+      &__descr
+        font-size: 14px
+        line-height: 17px
+        color: #858484
+  &-lines
+    position: absolute
+    top: 50px
+    left: 44.5%
+    transform: translate(-50%, 0%)
+    @include laptop
+      top: 78px
+      left: 43.5%
+    img
+      @include laptop
+        max-width: 550px
