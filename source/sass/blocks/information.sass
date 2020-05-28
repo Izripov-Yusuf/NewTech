@@ -1,4 +1,4 @@
-.news
+.information
   &-section
     padding-bottom: 125px
     &__title
@@ -68,62 +68,3 @@
       padding-left: 0
       font-size: 13px
       line-height: 16px
-  &-wrap
-    margin-top: 45px
-    display: flex
-    justify-content: space-between
-    @include tablet
-      flex-direction: column
-      align-items: center
-  &-text
-    margin-top: 15px
-    display: flex
-    align-items: center
-    justify-content: space-between
-    &-block
-      &__title
-        +montserratBold
-        font-size: 30px
-        line-height: 37px
-        letter-spacing: 0.035em
-        color: #232323
-        @include mobile-portrait
-          font-size: 19px
-          line-height: 23px
-      &__subtitle
-        font-size: 16px
-        line-height: 20px
-        color: #9e9e9e
-        @include mobile-portrait
-          font-size: 11px
-          line-height: 13px
-      &__button
-        width: 100%
-        max-width: 130px
-        padding: 10px 0
-        text-align: center
-        background-color: #2E3DB6
-        +montserratSemibold
-        font-size: 13px
-        line-height: 16px
-        letter-spacing: 0.01em
-        color: #F7F7F7
-        text-transform: uppercase
-        @include mobile-portrait
-          max-width: 110px
-  &-item
-    margin-right: 15px
-    width: 100%
-    max-width: 413px
-    &:last-child
-      margin-right: 0
-    @include tablet
-      margin: 0 0 35px 0
-  &-image
-    img
-      width: 100%
-      max-width: 415px
-      height: 295px
-      border-radius: 5px
-      @include mobile-portrait
-        height: auto

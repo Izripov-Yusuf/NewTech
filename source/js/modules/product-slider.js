@@ -38,4 +38,37 @@ export default () => {
     centerMode: true,
     //focusOnSelect: true,
   });
+
+  $('#contact-form').validate({
+    errorClass: "invalid",
+    errorElement: "label",
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      usertel: {
+        required: true
+      },
+      useremail: {
+        required: true,
+        email: true
+      },
+    },
+    messages: {
+      username: {
+        required: "Заполните поле",
+        maxlength: jQuery.validator.format("Не больше 15 символов"),
+        minlength: jQuery.validator.format("Осталось символов: {0}")
+      },
+      usertel: {
+        required: "Заполните поле"
+      },
+      useremail: {
+        required: "Заполните поле",
+        email: "Неправильный формат email"
+      },
+    },
+  });
 };

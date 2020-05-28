@@ -1,21 +1,21 @@
 export default () => {
-  const workingsText = document.querySelectorAll('.workings-text'),
-        workingsWrap = document.querySelector('.workings-wrap');
+  const workingsWrap = document.querySelector('.workings-wrap'),
+        workingsItem = workingsWrap.querySelectorAll('.workings-item');
 
   workingsWrap.addEventListener('click', (event) => {
     let target = event.target;
-    target = target.closest('.workings-text');
+    target = target.closest('.workings-item');
     if (target) {
-      if (target.classList.contains('workings-text-active')) {
-        target.classList.remove('workings-text-active');
+      if (target.classList.contains('workings-item-active')) {
+        target.classList.remove('workings-item-active');
       }
       else {
-        for (let i = 0; i < workingsText.length; i++) {
-          if (target === workingsText[i]) {
-            workingsText[i].classList.add('workings-text-active');
+        for (let i = 0; i < workingsItem.length; i++) {
+          if (target === workingsItem[i]) {
+            workingsItem[i].classList.add('workings-item-active');
           }
           else {
-            workingsText[i].classList.remove('workings-text-active');
+            workingsItem[i].classList.remove('workings-item-active');
           }
         }
       }

@@ -249,6 +249,38 @@ __webpack_require__.r(__webpack_exports__);
     centerMode: true //focusOnSelect: true,
 
   });
+  $('#contact-form').validate({
+    errorClass: "invalid",
+    errorElement: "label",
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      usertel: {
+        required: true
+      },
+      useremail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Заполните поле",
+        maxlength: jQuery.validator.format("Не больше 15 символов"),
+        minlength: jQuery.validator.format("Осталось символов: {0}")
+      },
+      usertel: {
+        required: "Заполните поле"
+      },
+      useremail: {
+        required: "Заполните поле",
+        email: "Неправильный формат email"
+      }
+    }
+  });
 });
 
 /***/ }),
@@ -270,9 +302,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 // Плавное перемещение по якорям
 var smoothScrollToBlock = function smoothScrollToBlock() {
-  var menuAnchors = document.querySelectorAll('a[href^="#"]'); //console.log('footerMenuAnchors: ', footerMenuAnchors);
-
-  console.log('menuAnchors: ', menuAnchors);
+  var menuAnchors = document.querySelectorAll('a[href^="#"]');
 
   var _iterator = _createForOfIteratorHelper(menuAnchors),
       _step;
@@ -341,21 +371,21 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var workingsText = document.querySelectorAll('.workings-text'),
-      workingsWrap = document.querySelector('.workings-wrap');
+  var workingsWrap = document.querySelector('.workings-wrap'),
+      workingsItem = workingsWrap.querySelectorAll('.workings-item');
   workingsWrap.addEventListener('click', function (event) {
     var target = event.target;
-    target = target.closest('.workings-text');
+    target = target.closest('.workings-item');
 
     if (target) {
-      if (target.classList.contains('workings-text-active')) {
-        target.classList.remove('workings-text-active');
+      if (target.classList.contains('workings-item-active')) {
+        target.classList.remove('workings-item-active');
       } else {
-        for (var i = 0; i < workingsText.length; i++) {
-          if (target === workingsText[i]) {
-            workingsText[i].classList.add('workings-text-active');
+        for (var i = 0; i < workingsItem.length; i++) {
+          if (target === workingsItem[i]) {
+            workingsItem[i].classList.add('workings-item-active');
           } else {
-            workingsText[i].classList.remove('workings-text-active');
+            workingsItem[i].classList.remove('workings-item-active');
           }
         }
       }

@@ -21,7 +21,7 @@ html(lang='ru')
             .presentation-text
               h2.presentation__title КОНВЕРТОПЛАНЫ ЭРА
               p.presentation__descr Масштабируемость конструкции под задачу, простота, надежность, полевая ремонтопригодность и модульность, низкая цена
-              a(href="#").button.presentation__button МОДЕЛЬНЫЙ РЯД
+              a(href="#decision").button.presentation__button МОДЕЛЬНЫЙ РЯД
             .presentation-content
               .presentation-image
                 picture
@@ -45,7 +45,7 @@ html(lang='ru')
                     span.presentation-item-text__title Ветроустройчивость
                     span.presentation-item-text__descr до 23 м/c
                 .presentation-item
-                  a(href="#").button.presentation__button ПОДРОБНЕЕ
+                  a(href="#contact").button.presentation__button ПОДРОБНЕЕ
       section.section.advantages-section(id="advantages")
         .container
           h2.section__title.advantages__title ПРЕИМУЩЕСТВА КОНВЕРТОПЛАНОВ серии ЭРА
@@ -70,7 +70,7 @@ html(lang='ru')
               p.advantages-item__descr Масштабируемость конструкции под задачу, простота, надежность, полевая ремонтопригодность, модульность, низкая цена
       section.section.product-section
         .container
-          .gallery-top.slider-for
+          .gallery-top.slider-for(id="for")
             .product-wrap
               .product-image
                 picture
@@ -102,7 +102,7 @@ html(lang='ru')
                 span.product__additional Дополнительные опции
                 select(size="1").product-additional-select
                   option(value="Система парашюта") Система парашюта
-                a(href="#").button.product__button ПОДРОБНЕЕ
+                a(href="#contact").button.product__button ПОДРОБНЕЕ
             .product-wrap
               .product-image
                 picture
@@ -134,7 +134,7 @@ html(lang='ru')
                 span.product__additional Дополнительные опции
                 select(size="1").product-additional-select
                   option(value="Система парашюта") Система парашюта
-                a(href="#").button.product__button ПОДРОБНЕЕ
+                a(href="#contact").button.product__button ПОДРОБНЕЕ
             .product-wrap
               .product-image
                 picture
@@ -166,7 +166,7 @@ html(lang='ru')
                 span.product__additional Дополнительные опции
                 select(size="1").product-additional-select
                   option(value="Система парашюта") Система парашюта
-                a(href="#").button.product__button ПОДРОБНЕЕ
+                a(href="#contact").button.product__button ПОДРОБНЕЕ
             .product-wrap
               .product-image
                 picture
@@ -198,7 +198,7 @@ html(lang='ru')
                 span.product__additional Дополнительные опции
                 select(size="1").product-additional-select
                   option(value="Система парашюта") Система парашюта
-                a(href="#").button.product__button ПОДРОБНЕЕ
+                a(href="#contact").button.product__button ПОДРОБНЕЕ
             .product-wrap
               .product-image
                 picture
@@ -230,7 +230,7 @@ html(lang='ru')
                 span.product__additional Дополнительные опции
                 select(size="1").product-additional-select
                   option(value="Система парашюта") Система парашюта
-                a(href="#").button.product__button ПОДРОБНЕЕ
+                a(href="#contact").button.product__button ПОДРОБНЕЕ
             .product-wrap
                 .product-image
                   picture
@@ -262,7 +262,7 @@ html(lang='ru')
                   span.product__additional Дополнительные опции
                   select(size="1").product-additional-select
                     option(value="Система парашюта") Система парашюта
-                  a(href="#").button.product__button ПОДРОБНЕЕ
+                  a(href="#contact").button.product__button ПОДРОБНЕЕ
           h2.product__title.product__title--second(id="decision") Наша продукция
           .product-slider.slider-nav
             .slide-wrap
@@ -280,7 +280,7 @@ html(lang='ru')
                   .product-slide-item-text
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
+                a(href="#for").button.product-slide__button ПОДРОБНЕЕ
             .slide-wrap
               .product-slide
                 picture
@@ -296,7 +296,7 @@ html(lang='ru')
                   .product-slide-item-text
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
+                a(href="#for").button.product-slide__button ПОДРОБНЕЕ
             .slide-wrap
               .product-slide
                 picture
@@ -312,7 +312,7 @@ html(lang='ru')
                   .product-slide-item-text
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
+                a(href="#for").button.product-slide__button ПОДРОБНЕЕ
             .slide-wrap
               .product-slide
                 picture
@@ -328,7 +328,7 @@ html(lang='ru')
                   .product-slide-item-text
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
+                a(href="#for").button.product-slide__button ПОДРОБНЕЕ
             .slide-wrap
               .product-slide
                 picture
@@ -344,7 +344,7 @@ html(lang='ru')
                   .product-slide-item-text
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
+                a(href="#for").button.product-slide__button ПОДРОБНЕЕ
             .slide-wrap
               .product-slide
                 picture
@@ -360,7 +360,7 @@ html(lang='ru')
                   .product-slide-item-text
                     span.product-slide-item-text__title Полезной нагрузки до
                     span.product-slide-item-text__descr 300 км.
-                a(href="#").button.product-slide__button ПОДРОБНЕЕ
+                a(href="#for").button.product-slide__button ПОДРОБНЕЕ
           .product-slider-controls
             .slider-button-prev
               +svg('left-arrow', 41, 10)
@@ -421,17 +421,22 @@ html(lang='ru')
               h3.backgrounder__title Заполните форму
               p.backgrounder__subtitle Мы свяжемся с вами любым удобным для вас способом
             .form-wrap-data
-              form(action="#")
-                input.name(type="text" placeholder="Ваше имя")
-                input.email(type="email" placeholder="Ваш E-mail")
-                input.tel(id="tel", type="tel" placeholder="Ваш номер телефона")
-                select(size="1")
-                  option(value="Интересующая модель конвертоплана") Интересующая модель
-                  option(value="КОНВЕРТОПЛАН ЭРА-54Т") КОНВЕРТОПЛАН ЭРА-54Т
-                  option(value="КОНВЕРТОПЛАН ЭРА-54Д") КОНВЕРТОПЛАН ЭРА-54Д
-                  option(value="КОНВЕРТОПЛАН ЭРА-54A") КОНВЕРТОПЛАН ЭРА-54A
-                textarea(name="" placeholder="Ваше сообщение")
-                input.button.form__button(type="submit", value="ОТПРАВИТЬ")
+              form(action="#" id="contact-form")
+                .input-wrap
+                  input.name(type="text" placeholder="Ваше имя" name="username")
+                .input-wrap
+                  input.email(type="email" placeholder="Ваш E-mail" name="useremail")
+                .input-wrap
+                  input.tel(id="tel", type="tel" placeholder="Ваш номер телефона" name="usertel")
+                .input-wrap
+                  select(size="1")
+                    option(value="Интересующая модель конвертоплана") Интересующая модель
+                    option(value="КОНВЕРТОПЛАН ЭРА-54Т") КОНВЕРТОПЛАН ЭРА-54Т
+                    option(value="КОНВЕРТОПЛАН ЭРА-54Д") КОНВЕРТОПЛАН ЭРА-54Д
+                    option(value="КОНВЕРТОПЛАН ЭРА-54A") КОНВЕРТОПЛАН ЭРА-54A
+                .textarea-wrap
+                  textarea(name="usermessage" placeholder="Ваше сообщение")
+                button.button.form__button(type="submit",) ОТПРАВИТЬ
       section.section.news-section(id="news")
         .container
           h2.section__title.news-section__title новости
@@ -439,7 +444,7 @@ html(lang='ru')
             .news-item
               .news-image
                 picture
-                img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
+                  img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
               .news-text
                 .news-text-block
                   h3.news-text-block__title Новость 1
@@ -448,7 +453,7 @@ html(lang='ru')
             .news-item
               .news-image
                 picture
-                img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
+                  img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
               .news-text
                 .news-text-block
                   h3.news-text-block__title Новость 2
@@ -457,7 +462,7 @@ html(lang='ru')
             .news-item
               .news-image
                 picture
-                img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
+                  img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
               .news-text
                 .news-text-block
                   h3.news-text-block__title Новость 3
@@ -485,6 +490,3 @@ html(lang='ru')
               h3.pattern-text-block__title Детали из алюминия и<br> ABC пластика
               p.pattern-text-block__descr Лёгкий и прочный корпус<br> позволяет увеличить<br> полезную нагрузку
     +footer('Главная страница')
-    script(src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous")
-    script(src="js/slick.min.js")
-    script(src="js/main.js")

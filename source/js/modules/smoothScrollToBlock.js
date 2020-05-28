@@ -2,8 +2,6 @@
 const smoothScrollToBlock = () => {
 
   const menuAnchors = document.querySelectorAll('a[href^="#"]');
-        //console.log('footerMenuAnchors: ', footerMenuAnchors);
-  console.log('menuAnchors: ', menuAnchors);
 
   for (let anchor of menuAnchors) {
     anchor.addEventListener('click', (event) => {

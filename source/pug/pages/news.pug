@@ -1,0 +1,22 @@
+include ../global/head
+include ../global/header
+include ../global/footer
+include ../components/svg
+
+doctype html
+html(lang='ru')
+  +head('Новые технологии')
+  body
+    +header('Новости')
+
+    main.news-page
+      .news-block
+        a(href="#").back Вернуться на главную
+        .news-wrapper
+          h1.news__title Название новости
+          .news-wrapper-block
+            p.news-wrapper__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi itaque consectetur animi ab architecto ad est libero? Totam maxime numquam voluptate veritatis praesentium perspiciatis earum, recusandae sunt molestias! Fuga, quibusdam.Assumenda, delectus asperiores! Tempore culpa veniam suscipit deleniti officiis ad quo. Veniam quod voluptate delectus corporis cupiditate numquam veritatis exercitationem minus recusandae, corrupti tempora similique aperiam ut architecto praesentium assumenda!Suscipit officia debitis ut quod nemo cum magnam dolorum mollitia vel eaque. Earum obcaecati odit atque inventore, cupiditate error eaque et, est voluptatum, quos veritatis fugit sapiente ex nihil corporis.
+            a.button.news-wrapper__button(href="#") НА ГЛАВНУЮ
+
+
+    +footer('Новости')

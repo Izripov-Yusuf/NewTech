@@ -40,8 +40,15 @@
     height: 495px
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.06)
     border-radius: 20px
+    cursor: pointer
     &:last-child
       margin-right: 0
+    &-active
+      .workings
+        &-text
+          height: 315px
+          @include mobile
+            height: 195px
     @include tablet
       margin: 0 0 30px 0
     @include mobile
@@ -64,14 +71,9 @@
     background: linear-gradient(269.23deg, #0F1495 27.77%, rgba(255, 255, 255, 0) 223.45%), #0148FF
     border-radius: 0px 0px 20px 20px
     color: $white
-    cursor: pointer
     transition: 0.3s
     @include mobile
       height: 80px
-    &-active
-      height: 315px
-      @include mobile
-        height: 195px
     &__title
       margin-bottom: 65px
       +furore
