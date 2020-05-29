@@ -39,6 +39,9 @@ export default () => {
     //focusOnSelect: true,
   });
 
+  let modal = document.querySelector('.modal'),
+      modalClose = document.querySelector('.modal-block__close');
+
   $('#contact-form').validate({
     errorClass: "invalid",
     errorElement: "label",
@@ -69,6 +72,20 @@ export default () => {
         required: "Заполните поле",
         email: "Неправильный формат email"
       },
+    },
+    submitHandler: function () {
+      event.preventDefault();
+      modal.classList.add('modal--active');
+      modal.addEventListener('click', (event) => {
+        let target = event.target;
+        if (target.classList.contains('modal-block__close') || target.classList.contains('modal--active')) {
+          modal.classList.remove('modal--active');
+        }
+      });
+      setTimeout(() => {
+        modal.classList.remove('modal--active');
+      }, 5000);
+      $('#contact-form').trigger("reset");
     },
   });
 };

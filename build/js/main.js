@@ -249,6 +249,8 @@ __webpack_require__.r(__webpack_exports__);
     centerMode: true //focusOnSelect: true,
 
   });
+  var modal = document.querySelector('.modal'),
+      modalClose = document.querySelector('.modal-block__close');
   $('#contact-form').validate({
     errorClass: "invalid",
     errorElement: "label",
@@ -279,6 +281,21 @@ __webpack_require__.r(__webpack_exports__);
         required: "Заполните поле",
         email: "Неправильный формат email"
       }
+    },
+    submitHandler: function submitHandler() {
+      event.preventDefault();
+      modal.classList.add('modal--active');
+      modal.addEventListener('click', function (event) {
+        var target = event.target;
+
+        if (target.classList.contains('modal-block__close') || target.classList.contains('modal--active')) {
+          modal.classList.remove('modal--active');
+        }
+      });
+      setTimeout(function () {
+        modal.classList.remove('modal--active');
+      }, 5000);
+      $('#contact-form').trigger("reset");
     }
   });
 });
