@@ -36,6 +36,7 @@ export default () => {
     prevArrow: $('.video-slider-prev'),
     dots: false,
     centerMode: true,
+    adaptiveHeight: true
     //focusOnSelect: true,
   });
 

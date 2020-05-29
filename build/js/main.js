@@ -279,7 +279,8 @@ __webpack_require__.r(__webpack_exports__);
     nextArrow: $('.video-slider-next'),
     prevArrow: $('.video-slider-prev'),
     dots: false,
-    centerMode: true //focusOnSelect: true,
+    centerMode: true,
+    adaptiveHeight: true //focusOnSelect: true,
 
   });
   var modal = document.querySelector('.modal'),
