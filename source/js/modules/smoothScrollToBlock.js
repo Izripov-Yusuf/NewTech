@@ -1,7 +1,7 @@
 // Плавное перемещение по якорям
 const smoothScrollToBlock = () => {
 
-  const menuAnchors = document.querySelectorAll('a[href^="#"]');
+  /* const menuAnchors = document.querySelectorAll('a[href^="#"]');
 
   for (let anchor of menuAnchors) {
     anchor.addEventListener('click', (event) => {
@@ -12,6 +12,14 @@ const smoothScrollToBlock = () => {
         block: 'start'
       });
     });
-  }
+  } */
+
+  $("a").on("click", function (e) {
+    e.preventDefault();
+    var anchor = $(this).attr('href');
+    $('html, body').stop().animate({
+      scrollTop: $(anchor).offset().top - 130
+    }, 800);
+  });
 };
 export default smoothScrollToBlock;
