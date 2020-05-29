@@ -6,7 +6,7 @@ include ../components/svg
 doctype html
 html(lang='ru')
   +head('Новые технологии')
-  body
+  body(id="top")
     +header('Главная страница')
 
     main
@@ -494,4 +494,6 @@ html(lang='ru')
           img(src="img/sprite/close.svg", alt="кнопка закрытия").modal-block__close
           h2.modal-block__title ФОРМА УСПЕШНО ОТПРАВЛЕНА
           p.modal-block__text Наши менеджеры свяжутся с вами в ближайшее время
+    a.top(href="#top") Наверх
+      +svg('top-arrow', 8, 27)
     +footer('Главная страница')

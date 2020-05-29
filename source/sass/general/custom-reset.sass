@@ -27,6 +27,7 @@ html
   box-sizing: inherit
 
 body
+  position: relative
   display: flex
   flex-direction: column
   min-height: 100%
@@ -64,6 +65,21 @@ a
   outline: none
   margin: 0
   padding: 0
+
+.top
+  position: fixed
+  bottom: 5%
+  right: 6%
+  display: flex
+  align-items: center
+  text-decoration: none
+  font-size: 18px
+  line-height: 22px
+  letter-spacing: 0.01em
+  color: $black
+  +montserratMed
+  svg
+    margin-left: 15px
 
 input.invalid
   border: 1px solid red !important

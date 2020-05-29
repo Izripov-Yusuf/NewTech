@@ -101,6 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_workings_text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/workings-text */ "./source/js/modules/workings-text.js");
 /* harmony import */ var _modules_maskPhone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/maskPhone */ "./source/js/modules/maskPhone.js");
 /* harmony import */ var _modules_smoothScrollToBlock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/smoothScrollToBlock */ "./source/js/modules/smoothScrollToBlock.js");
+/* harmony import */ var _modules_arrowUp__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/arrowUp */ "./source/js/modules/arrowUp.js");
+
 
 
 
@@ -113,6 +115,37 @@ Object(_modules_product_slider__WEBPACK_IMPORTED_MODULE_2__["default"])();
 Object(_modules_workings_text__WEBPACK_IMPORTED_MODULE_3__["default"])();
 Object(_modules_maskPhone__WEBPACK_IMPORTED_MODULE_4__["default"])();
 Object(_modules_smoothScrollToBlock__WEBPACK_IMPORTED_MODULE_5__["default"])();
+Object(_modules_arrowUp__WEBPACK_IMPORTED_MODULE_6__["default"])();
+
+/***/ }),
+
+/***/ "./source/js/modules/arrowUp.js":
+/*!**************************************!*\
+  !*** ./source/js/modules/arrowUp.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var upArrow = document.querySelector('.top');
+
+  if (upArrow) {
+    upArrow.style.display = 'none';
+
+    var scrollToNext = function scrollToNext() {
+      if (window.pageYOffset > 100) {
+        upArrow.style.display = 'block';
+      } else if (window.pageYOffset < 100) {
+        upArrow.style.display = 'none';
+      }
+    };
+
+    scrollToNext();
+    window.addEventListener('scroll', scrollToNext);
+  }
+});
 
 /***/ }),
 
