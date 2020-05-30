@@ -161,12 +161,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var burger = document.querySelector('.header-burger'),
       headerMobile = document.querySelector('.header--mobile'),
-      headerClose = document.querySelector('.header--mobile-close');
-  burger.addEventListener('click', function () {
-    headerMobile.classList.add('header--mobile-active');
-  });
-  headerClose.addEventListener('click', function () {
-    headerMobile.classList.remove('header--mobile-active');
+      headerClose = document.querySelector('.header--mobile-close'),
+      headerMobileLinks = headerMobile.querySelectorAll('a'),
+      body = document.querySelector('body');
+
+  var handlerMenu = function handlerMenu() {
+    headerMobile.classList.toggle('header--mobile-active');
+  };
+
+  var scrollToBlock = function scrollToBlock(index) {
+    for (var i = 0; i < headerMobileLinks.length; i++) {
+      if (index === i) {
+        handlerMenu();
+      }
+    }
+  };
+
+  body.addEventListener('click', function (event) {
+    var target = event.target,
+        parent = target.parentNode;
+
+    if (target === burger || parent.classList.contains('burger')) {
+      handlerMenu();
+    }
+
+    if (target === headerClose) {
+      handlerMenu();
+    } else if (parent.tagName === 'LI') {
+      headerMobileLinks.forEach(function (item, i) {
+        if (item === target) {
+          scrollToBlock(i);
+        }
+      });
+    }
   });
 });
 

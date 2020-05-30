@@ -1,13 +1,37 @@
 export default () => {
   const burger = document.querySelector('.header-burger'),
         headerMobile = document.querySelector('.header--mobile'),
-        headerClose = document.querySelector('.header--mobile-close');
+        headerClose = document.querySelector('.header--mobile-close'),
+        headerMobileLinks = headerMobile.querySelectorAll('a'),
+        body = document.querySelector('body');
 
-  burger.addEventListener('click', () => {
-    headerMobile.classList.add('header--mobile-active');
-  });
+  const handlerMenu = () => {
+    headerMobile.classList.toggle('header--mobile-active');
+  };
 
-  headerClose.addEventListener('click', () => {
-    headerMobile.classList.remove('header--mobile-active');
+  const scrollToBlock = (index) => {
+    for (let i = 0; i < headerMobileLinks.length; i++) {
+      if (index === i) {
+        handlerMenu();
+      }
+    }
+  };
+
+  body.addEventListener('click', (event) => {
+    let target = event.target,
+    parent = target.parentNode;
+
+    if (target === burger || parent.classList.contains('burger')) {
+      handlerMenu();
+    }
+    if (target === headerClose) {
+      handlerMenu();
+    } else if (parent.tagName === 'LI') {
+      headerMobileLinks.forEach((item, i) => {
+        if (item === target) {
+          scrollToBlock(i);
+        }
+      });
+    }
   });
 };
