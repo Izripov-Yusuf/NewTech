@@ -435,10 +435,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var workingsWrap = document.querySelector('.workings-wrap'),
-      workingsItem = workingsWrap.querySelectorAll('.workings-item');
+  var workingsWrap = document.querySelector('.workings-wrap');
 
   if (workingsWrap) {
+    var workingsItem = workingsWrap.querySelectorAll('.workings-item');
     workingsWrap.addEventListener('click', function (event) {
       var target = event.target;
       target = target.closest('.workings-item');

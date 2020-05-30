@@ -1,8 +1,8 @@
 export default () => {
-  const workingsWrap = document.querySelector('.workings-wrap'),
-        workingsItem = workingsWrap.querySelectorAll('.workings-item');
+  const workingsWrap = document.querySelector('.workings-wrap');
 
   if (workingsWrap) {
+    let workingsItem = workingsWrap.querySelectorAll('.workings-item');
     workingsWrap.addEventListener('click', (event) => {
       let target = event.target;
       target = target.closest('.workings-item');
