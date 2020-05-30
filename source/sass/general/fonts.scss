@@ -6,6 +6,7 @@
     url('../../fonts/Montserrat-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -16,6 +17,7 @@
     url('../../fonts/Montserrat-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -26,6 +28,7 @@
     url('../../fonts/Montserrat-SemiBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -36,6 +39,7 @@
     url('../../fonts/Montserrat-ExtraBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -46,6 +50,7 @@
     url('../../fonts/Furore.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -56,6 +61,7 @@
     url('../../fonts/PFDinStencil-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
   }
 
 @mixin montserratReg {
