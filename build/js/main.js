@@ -160,6 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var burger = document.querySelector('.header-burger'),
+      spanBurger = burger.querySelector('.burger'),
       headerMobile = document.querySelector('.header--mobile'),
       headerClose = document.querySelector('.header--mobile-close'),
       headerMobileLinks = headerMobile.querySelectorAll('a'),
@@ -181,7 +182,7 @@ __webpack_require__.r(__webpack_exports__);
     var target = event.target,
         parent = target.parentNode;
 
-    if (target === burger || parent.classList.contains('burger')) {
+    if (target === burger || target === spanBurger) {
       handlerMenu();
     }
 

@@ -1,5 +1,6 @@
 export default () => {
   const burger = document.querySelector('.header-burger'),
+        spanBurger = burger.querySelector('.burger'),
         headerMobile = document.querySelector('.header--mobile'),
         headerClose = document.querySelector('.header--mobile-close'),
         headerMobileLinks = headerMobile.querySelectorAll('a'),
@@ -21,7 +22,7 @@ export default () => {
     let target = event.target,
     parent = target.parentNode;
 
-    if (target === burger || parent.classList.contains('burger')) {
+    if (target === burger || target === spanBurger) {
       handlerMenu();
     }
     if (target === headerClose) {
