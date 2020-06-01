@@ -18,12 +18,30 @@ export default () => {
     }
   };
 
-  body.addEventListener('click', (event) => {
-    alert(event);
+  burger.addEventListener('click', () => {
+    handlerMenu();
+  });
+
+  /* spanBurger.addEventListener('click', () => {
+    handlerMenu();
+  }); */
+
+  headerClose.addEventListener('click', () => {
+    handlerMenu();
+  });
+
+  for (let i = 0; i < headerMobileLinks.length; i++) {
+    headerMobileLinks[i].addEventListener('click', () => {
+      scrollToBlock(i);
+    });
+  }
+
+  /* body.addEventListener('click', (event) => {
+    //alert(event);
     let target = event.target,
     parent = target.parentNode;
-    alert(target);
-    alert(parent);
+    //alert(target);
+    //alert(parent);
 
     if (target === burger || target === spanBurger) {
       handlerMenu();
@@ -37,5 +55,5 @@ export default () => {
         }
       });
     }
-  });
+  }); */
 };

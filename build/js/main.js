@@ -178,27 +178,46 @@ __webpack_require__.r(__webpack_exports__);
     }
   };
 
-  body.addEventListener('click', function (event) {
-    alert(event);
-    var target = event.target,
-        parent = target.parentNode;
-    alert(target);
-    alert(parent);
+  burger.addEventListener('click', function () {
+    handlerMenu();
+  });
+  /* spanBurger.addEventListener('click', () => {
+    handlerMenu();
+  }); */
 
-    if (target === burger || target === spanBurger) {
+  headerClose.addEventListener('click', function () {
+    handlerMenu();
+  });
+
+  var _loop = function _loop(i) {
+    headerMobileLinks[i].addEventListener('click', function () {
+      scrollToBlock(i);
+    });
+  };
+
+  for (var i = 0; i < headerMobileLinks.length; i++) {
+    _loop(i);
+  }
+  /* body.addEventListener('click', (event) => {
+    //alert(event);
+    let target = event.target,
+    parent = target.parentNode;
+    //alert(target);
+    //alert(parent);
+      if (target === burger || target === spanBurger) {
       handlerMenu();
     }
-
     if (target === headerClose) {
       handlerMenu();
     } else if (parent.tagName === 'LI') {
-      headerMobileLinks.forEach(function (item, i) {
+      headerMobileLinks.forEach((item, i) => {
         if (item === target) {
           scrollToBlock(i);
         }
       });
     }
-  });
+  }); */
+
 });
 
 /***/ }),
