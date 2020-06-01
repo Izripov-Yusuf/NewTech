@@ -19,8 +19,11 @@ export default () => {
   };
 
   body.addEventListener('click', (event) => {
+    alert(event);
     let target = event.target,
     parent = target.parentNode;
+    alert(target);
+    alert(parent);
 
     if (target === burger || target === spanBurger) {
       handlerMenu();

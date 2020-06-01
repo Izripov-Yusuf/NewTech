@@ -179,8 +179,11 @@ __webpack_require__.r(__webpack_exports__);
   };
 
   body.addEventListener('click', function (event) {
+    alert(event);
     var target = event.target,
         parent = target.parentNode;
+    alert(target);
+    alert(parent);
 
     if (target === burger || target === spanBurger) {
       handlerMenu();
