@@ -46,6 +46,13 @@ html(lang='ru')
                     span.presentation-item-text__descr до 23 м/c
                 .presentation-item
                   a(href="#contact").button.presentation__button ПОДРОБНЕЕ
+      section.section.touchdown-section
+      .container
+        .touchdown-section__video
+          video(preload="metadata" poster="img/poster/poster.jpg" controls playsinline)
+                source(src="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
+                object(data="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
+                  param(name="movie" value="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
       section.section.advantages-section(id="advantages")
         .container
           h2.section__title.advantages__title ПРЕИМУЩЕСТВА КОНВЕРТОПЛАНОВ серии ЭРА
@@ -400,14 +407,14 @@ html(lang='ru')
                   param(name="movie" value="https://bossclean.ru/wp-content/uploads/2020/01/CLEANBACK-REPRESENT-720p_Trim.mp4")
             .video-slide
               video(preload="metadata" controls playsinline)
-                source(src="https://drones.lmaa.ru/wp-content/uploads/2020/05/kaver-na-divane-1_-perepel-hit-iz-00-h.mp4")
-                object(data="https://drones.lmaa.ru/wp-content/uploads/2020/05/kaver-na-divane-1_-perepel-hit-iz-00-h.mp4")
-                  param(name="movie" value="https://drones.lmaa.ru/wp-content/uploads/2020/05/kaver-na-divane-1_-perepel-hit-iz-00-h.mp4")
+                source(src="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
+                object(data="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
+                  param(name="movie" value="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
             .video-slide
               video(preload="metadata" controls playsinline)
-                source(src="https://drones.lmaa.ru/wp-content/uploads/2020/05/top-10-_-best-winners-of-the-voice-kids-part-3.mp4")
-                object(data="https://drones.lmaa.ru/wp-content/uploads/2020/05/top-10-_-best-winners-of-the-voice-kids-part-3.mp4")
-                  param(name="movie" value="https://drones.lmaa.ru/wp-content/uploads/2020/05/top-10-_-best-winners-of-the-voice-kids-part-3.mp4")
+                source(src="https://drones.lmaa.ru/wp-content/uploads/2020/05/knight-33990.mp4")
+                object(data="https://drones.lmaa.ru/wp-content/uploads/2020/05/knight-33990.mp4")
+                  param(name="movie" value="https://drones.lmaa.ru/wp-content/uploads/2020/05/knight-33990.mp4")
           .video-slider-arrows
             .video-slider-prev
               +svg('big-left-arrow', 33, 45)
@@ -441,7 +448,7 @@ html(lang='ru')
         .container
           h2.section__title.news-section__title новости
           .news-wrap
-            .news-item
+            a.news-item(href="#")
               .news-image
                 picture
                   img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
@@ -449,8 +456,7 @@ html(lang='ru')
                 .news-text-block
                   h3.news-text-block__title Новость 1
                   span.news-text-block__subtitle Подзаголовок новости 1
-                a.button.news-text-block__button(href="#") ЧИТАТЬ
-            .news-item
+            a.news-item(href="#")
               .news-image
                 picture
                   img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
@@ -458,8 +464,7 @@ html(lang='ru')
                 .news-text-block
                   h3.news-text-block__title Новость 2
                   span.news-text-block__subtitle Подзаголовок новости 2
-                a.button.news-text-block__button(href="#") ЧИТАТЬ
-            .news-item
+            a.news-item(href="#")
               .news-image
                 picture
                   img(src="img/news/news-img.png", srcset="img/news/news-img@2x.png 2x", alt="Фото новости")
@@ -467,7 +472,6 @@ html(lang='ru')
                 .news-text-block
                   h3.news-text-block__title Новость 3
                   span.news-text-block__subtitle Подзаголовок новости 3
-                a.button.news-text-block__button(href="#") ЧИТАТЬ
       section.section.pattern-section
         .container
         .pattern-content
