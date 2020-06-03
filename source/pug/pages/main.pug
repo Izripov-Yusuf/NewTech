@@ -47,12 +47,13 @@ html(lang='ru')
                 .presentation-item
                   a(href="#contact").button.presentation__button ПОДРОБНЕЕ
       section.section.touchdown-section
-      .container
-        .touchdown-section__video
-          video(preload="metadata" poster="img/poster/poster.jpg" controls playsinline)
-                source(src="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
-                object(data="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
-                  param(name="movie" value="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
+        .container
+          h2.section__title.touchdown-section__title Посадка на движущуюся платформу
+          .touchdown-section__video
+            video(preload="metadata" poster="img/poster/poster.jpg" autoplay muted controls playsinline)
+                  source(src="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
+                  object(data="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
+                    param(name="movie" value="https://drones.lmaa.ru/wp-content/uploads/2020/06/olimpijskaya-onlajn-trenirovka-s-natalej-korostelyovoj.mp4")
       section.section.advantages-section(id="advantages")
         .container
           h2.section__title.advantages__title ПРЕИМУЩЕСТВА КОНВЕРТОПЛАНОВ серии ЭРА
