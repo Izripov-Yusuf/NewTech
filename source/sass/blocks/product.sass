@@ -206,12 +206,16 @@
   &-slider
     margin: 0 -20px
     height: 545px
+    @include tablet
+      margin: 0
     @include mobile
       height: 480px
     .slide-wrap
       padding: 0 20px
       height: auto
       outline: none
+      @include tablet
+        padding: 0
     .slick-track
       display: flex
       align-items: center
